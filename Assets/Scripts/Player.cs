@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     private Vector3 camRight;
     private Vector3 movePLayer;
     //CombatPosition _combatposition;
-    Charview view;
+    //Charview view;
 
     public CharacterController player;
     public float playerspeed;
@@ -49,38 +49,38 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        view = GetComponent<Charview>();
+        //view = GetComponent<Charview>();
     }
     private void Start()
     {
-        player = GetComponent<CharacterController>();
+        //player = GetComponent<CharacterController>();
     }
     private void Update()
     {
-        horizonalMove = Input.GetAxis("Horizontal");
-        verticalMove = Input.GetAxis("Vertical");
+        //horizonalMove = Input.GetAxis("Horizontal");
+        //verticalMove = Input.GetAxis("Vertical");
         //PlayerDies();
-        playerInput = new Vector3(horizonalMove, 0, verticalMove);
-        playerInput = Vector3.ClampMagnitude(playerInput, 1);
+        //playerInput = new Vector3(horizonalMove, 0, verticalMove);
+        //playerInput = Vector3.ClampMagnitude(playerInput, 1);
 
         camDirection();
 
-        movePLayer = playerInput.x * camRight + playerInput.z * camForward;
+        //movePLayer = playerInput.x * camRight + playerInput.z * camForward;
 
-        player.transform.LookAt(player.transform.position + movePLayer);
+        //player.transform.LookAt(player.transform.position + movePLayer);
 
-        setGravity();
+        //setGravity();
 
-        player.Move(movePLayer * playerspeed * Time.deltaTime);
+        //player.Move(movePLayer * playerspeed * Time.deltaTime);
 
-        if(movePLayer.magnitude > 0.3f)
+        /*if(movePLayer.magnitude > 0.3f)
         {
             view.Isrunning(true);
         }
         else
         {
             view.Isrunning(false);
-        }
+        }*/
     }
 
     

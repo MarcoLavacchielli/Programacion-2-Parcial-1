@@ -18,12 +18,12 @@ public class Succionador : MonoBehaviour
             // Calcular la dirección del jugador hacia el cubo
             Vector3 direccion = transform.position - collider.transform.position;
 
-            // Mover al jugador en la dirección del ventilador
-            CharacterController controller = collider.GetComponent<CharacterController>();
-            if (controller != null)
+            // Aplicar fuerza hacia el cubo
+            Rigidbody rb = collider.attachedRigidbody;
+            if (rb != null)
             {
                 direccion.y = 0f; // Evitar que el jugador levite
-                controller.Move(direccion.normalized * fuerzaAbsorcion * Time.fixedDeltaTime);
+                rb.AddForce(direccion.normalized * fuerzaAbsorcion, ForceMode.Acceleration);
             }
         }
     }
