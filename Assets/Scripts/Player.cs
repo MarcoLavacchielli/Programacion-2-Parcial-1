@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         //playerInput = new Vector3(horizonalMove, 0, verticalMove);
         //playerInput = Vector3.ClampMagnitude(playerInput, 1);
 
-        camDirection();
+        //camDirection();
 
         //movePLayer = playerInput.x * camRight + playerInput.z * camForward;
 
@@ -99,7 +99,6 @@ public class Player : MonoBehaviour
     void setGravity()
     {
         movePLayer.y = -gravity * Time.deltaTime;
-
     }
     /*public void PlayerDies()
     {

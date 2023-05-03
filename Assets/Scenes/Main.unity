@@ -22838,6 +22838,10 @@ PrefabInstance:
       propertyPath: myAnim
       value: 
       objectReference: {fileID: 1940881432}
+    - target: {fileID: 3787641334845275167, guid: 97bf9d8207519ce4d89143c227b3dd1f, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 9112766969278726823}
     - target: {fileID: 5299470838625391949, guid: 97bf9d8207519ce4d89143c227b3dd1f, type: 3}
       propertyPath: mainCamera
       value: 
@@ -23106,6 +23110,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 9112766969278726823}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97bf9d8207519ce4d89143c227b3dd1f, type: 3}
 --- !u!4 &8077958658333811774 stripped
