@@ -24,10 +24,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Get the direction of the camera
+        Vector3 cameraDirection = Camera.main.transform.forward;
+        cameraDirection.y = 0f;
+        cameraDirection.Normalize();
+
+        // Get the input axes
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
 
-        Vector3 moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
+        // Calculate the movement direction based on camera direction and input axes
+        Vector3 moveDirection = (cameraDirection * verticalInput + Camera.main.transform.right * horizontalInput).normalized;
 
         // Check if the player is on the ground
         if (jumpy.onFloor)
