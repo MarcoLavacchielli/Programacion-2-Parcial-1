@@ -22802,6 +22802,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1144738344720143438, guid: 97bf9d8207519ce4d89143c227b3dd1f, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 9112766969278726823}
     - target: {fileID: 1351054344476017814, guid: 97bf9d8207519ce4d89143c227b3dd1f, type: 3}
       propertyPath: m_Name
       value: eyes
@@ -23110,10 +23114,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 9112766969278726823}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97bf9d8207519ce4d89143c227b3dd1f, type: 3}
 --- !u!4 &8077958658333811774 stripped
