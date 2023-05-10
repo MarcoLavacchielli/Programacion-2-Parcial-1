@@ -11,6 +11,7 @@ public class CanvasPausa : MonoBehaviour
     [SerializeField] private GameObject pauseMenuDesing;
 
     public static bool gamePause = false;
+    public CombatPosition combat;
 
     private void Start()
     {
@@ -54,6 +55,15 @@ public class CanvasPausa : MonoBehaviour
     public void resume()
     {
         //si se saca la pausa, el tiempo vuelve a la normalidad y vuelve a aparecer el boton
+        if (combat.battlePosition == true)
+        {
+            Cursor.visible = true;
+        }
+        else 
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         gamePause = false;
         Time.timeScale = 1f;
         //pauseButton.SetActive(true);
@@ -66,8 +76,7 @@ public class CanvasPausa : MonoBehaviour
             a.Play();
         }*/
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
     public void restart()
