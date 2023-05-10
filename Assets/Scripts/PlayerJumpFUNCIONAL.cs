@@ -21,7 +21,7 @@ public class PlayerJumpFUNCIONAL : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && onFloor)
         {
-            view.AnimJump();
+            //view.AnimJump();
             Vector3 jumpDirection = transform.forward * myRig.velocity.magnitude;
             jumpDirection.y = jumpForce;
 
