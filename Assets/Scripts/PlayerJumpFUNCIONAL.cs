@@ -10,6 +10,8 @@ public class PlayerJumpFUNCIONAL : MonoBehaviour
     public float jumpForce = 5;
     public bool onFloor = true;
 
+    Charview view;
+
     void Awake()
     {
         myRig = GetComponent<Rigidbody>();
@@ -19,6 +21,7 @@ public class PlayerJumpFUNCIONAL : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && onFloor)
         {
+            view.AnimJump();
             Vector3 jumpDirection = transform.forward * myRig.velocity.magnitude;
             jumpDirection.y = jumpForce;
 
