@@ -7,7 +7,7 @@ using Cinemachine;
 public class CombatPosition : MonoBehaviour
 {
     //public EnemyAldeano enemyAldean;
-    public ParticleSystem ParticulasAmarillas;
+    
     public Enemy enemyy;
     public Combat combatscript;
     public List<GameObject> enemyGObj;
@@ -21,13 +21,15 @@ public class CombatPosition : MonoBehaviour
     public CinemachineVirtualCamera ActiveCamera;
     GameManager myGM;
     public MyCamera camerascript;
-    int enemiesreminder;
+   public int enemiesreminder;
     public Deck deckscript;
     public VigorDeck vigordeckscript;
     public VigorCardsDisplay ScriptVigorCardDisplaySlot4;
     public VigorCardsDisplay ScriptVigorCardDisplaySlot5;
     public VigorCardsDisplay ScriptVigorCardDisplaySlot6;
+    public StadisticPlayer stadisticPlayerScript;
 
+    public float ContadorTransicion;
     public void Start()
     {
         myGM = GameManager.instance;
@@ -44,11 +46,11 @@ public class CombatPosition : MonoBehaviour
 
             myGM.activeUI();
             battlePosition = false;
-            camerascript.enabled = true;
+            //camerascript.enabled = true;
             player.enabled = true;
             playerRB.constraints = RigidbodyConstraints.None;
             playerRB.constraints = RigidbodyConstraints.FreezeRotation;
-            ParticulasAmarillas.Stop();
+            
             Debug.Log("Saliste del combate");
             //playerRB.freezeRotation = false;
             //player.enabled = true;
@@ -93,10 +95,12 @@ public class CombatPosition : MonoBehaviour
         if (other.gameObject.layer == 9)
         {
             Destroy(other.gameObject);
+            camerascript.canMoveCamera = false;
             enemiesreminder = 1;
             Enemy actualenemy = Instantiate(enemyGObj[Random.Range(0, enemyGObj.Count)], areaWhereTheEnemySpawns.transform.position, areaWhereTheEnemySpawns.transform.rotation).GetComponent<Enemy>();
             actualenemy.Setcombat(this);
-            actualenemy.SetPlayer(player);
+            //actualenemy.SetPlayer(stadisticPlayerScript); no se por que tira error
+
             combatscript.setenemy(actualenemy);
             ScriptVigorCardDisplaySlot4.setenemy(actualenemy);
             ScriptVigorCardDisplaySlot5.setenemy(actualenemy);

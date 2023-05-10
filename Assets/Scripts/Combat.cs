@@ -65,7 +65,7 @@ public class Combat : MonoBehaviour
     }
     void Update()
     {
-        Enemydealsdamage();
+        
     }
 
     public void activaryDesactivarCartaAlUsarlaSlot1()
@@ -127,9 +127,9 @@ public class Combat : MonoBehaviour
     }*/
     public void Enemydealsdamage()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && enemyattack == true)
+        if (enemyattack == true)
         {
-            //PlayerStadisticsScript.vigor = MoreVigorPerRound + 1;
+            PlayerStadisticsScript.vigor += 1;
             button1.interactable = true;
             button2.interactable = true;
             button3.interactable = true;
@@ -167,6 +167,8 @@ public class Combat : MonoBehaviour
                 activaryDesactivarCartaAlUsarlaSlot6();
             }
             enemyattack = false;
+            Debug.Log("Final del turno");
+            Debug.Log("Inicio el siguiente turno");
         }
     }
     public void clickonslotone()

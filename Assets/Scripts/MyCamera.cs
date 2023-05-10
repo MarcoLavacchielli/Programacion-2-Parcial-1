@@ -8,9 +8,11 @@ public class MyCamera : MonoBehaviour
      private Transform target;
      [Range (0, 1)] public float lerpValue;
      public float sensibilidad;
+    public bool canMoveCamera;
 
-      void Start()
+    void Start()
      {
+        canMoveCamera = true;
         Cursor.lockState = CursorLockMode.Locked;
 
         target = GameObject.Find("Player").transform;

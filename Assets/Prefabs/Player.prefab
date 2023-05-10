@@ -160,7 +160,6 @@ GameObject:
   - component: {fileID: 8077958657708868333}
   - component: {fileID: 2164653984255317432}
   - component: {fileID: 5561988426673552123}
-  - component: {fileID: 5299470838625391949}
   - component: {fileID: 5790167006782233436}
   - component: {fileID: 7910656068851151482}
   - component: {fileID: 5712986794260492655}
@@ -168,6 +167,9 @@ GameObject:
   - component: {fileID: 3787641334845275167}
   - component: {fileID: 4824398601918235940}
   - component: {fileID: 3162428869367982519}
+  - component: {fileID: 2831909129250575560}
+  - component: {fileID: 6615082284677106671}
+  - component: {fileID: 5403775076380772937}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -208,7 +210,7 @@ MonoBehaviour:
   verticalMove: 0
   mainCamera: {fileID: 0}
   player: {fileID: 2164653984255317432}
-  playerspeed: 5
+  playerspeed: 10
   PlayerHealth: 30
   vigorPoints: 40
   gravity: 9.8
@@ -277,41 +279,6 @@ MonoBehaviour:
   doormask:
     serializedVersion: 2
     m_Bits: 128
---- !u!114 &5299470838625391949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8077958657708868338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7864799debd9f1f49a415e9631e6210e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ParticulasAmarillas: {fileID: 0}
-  enemyy: {fileID: 0}
-  combatscript: {fileID: 5790167006782233436}
-  enemyGObj:
-  - {fileID: 1397953686340855591, guid: 8ecb436b80c8836468543b306278e2ac, type: 3}
-  - {fileID: 8476489839765905848, guid: 2a0d3a38b2a731a44ab311c9e4e213b9, type: 3}
-  - {fileID: 6699985492419601553, guid: d6006de04267aff408dd2528a849bc09, type: 3}
-  enemytransf: {fileID: 8249360497324799471, guid: 57b2f6fbb200dbb45a64c72a6c80e0d4, type: 3}
-  areaWhereTheEnemySpawns: {fileID: 0}
-  battlePosition: 0
-  playerRB: {fileID: 8077958657708868332}
-  mainCamera: {fileID: 0}
-  player: {fileID: 8077958657708868335}
-  cameras:
-  - {fileID: 0}
-  - {fileID: 0}
-  ActiveCamera: {fileID: 0}
-  camerascript: {fileID: 0}
-  deckscript: {fileID: 7910656068851151482}
-  vigordeckscript: {fileID: 5712986794260492655}
-  ScriptVigorCardDisplaySlot4: {fileID: 0}
-  ScriptVigorCardDisplaySlot5: {fileID: 0}
-  ScriptVigorCardDisplaySlot6: {fileID: 0}
 --- !u!114 &5790167006782233436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,6 +408,73 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 5
   onFloor: 1
+--- !u!114 &2831909129250575560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077958657708868338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370d1b38e8da182478011df5a9167918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
+  vigor: 40
+  defense: 0
+--- !u!114 &6615082284677106671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077958657708868338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7864799debd9f1f49a415e9631e6210e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyy: {fileID: 0}
+  combatscript: {fileID: 5790167006782233436}
+  enemyGObj:
+  - {fileID: 1397953686340855591, guid: 8ecb436b80c8836468543b306278e2ac, type: 3}
+  - {fileID: 8476489839765905848, guid: 2a0d3a38b2a731a44ab311c9e4e213b9, type: 3}
+  - {fileID: 6699985492419601553, guid: d6006de04267aff408dd2528a849bc09, type: 3}
+  enemytransf: {fileID: 8249360497324799471, guid: 57b2f6fbb200dbb45a64c72a6c80e0d4, type: 3}
+  areaWhereTheEnemySpawns: {fileID: 0}
+  battlePosition: 0
+  playerRB: {fileID: 8077958657708868332}
+  mainCamera: {fileID: 0}
+  player: {fileID: 8077958657708868335}
+  cameras:
+  - {fileID: 0}
+  - {fileID: 0}
+  ActiveCamera: {fileID: 0}
+  camerascript: {fileID: 0}
+  enemiesreminder: 0
+  deckscript: {fileID: 7910656068851151482}
+  vigordeckscript: {fileID: 5712986794260492655}
+  ScriptVigorCardDisplaySlot4: {fileID: 0}
+  ScriptVigorCardDisplaySlot5: {fileID: 0}
+  ScriptVigorCardDisplaySlot6: {fileID: 0}
+  stadisticPlayerScript: {fileID: 2831909129250575560}
+  ContadorTransicion: 1
+--- !u!114 &5403775076380772937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077958657708868338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370d1b38e8da182478011df5a9167918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
+  vigor: 40
+  defense: 0
 --- !u!1 &8077958658602386710
 GameObject:
   m_ObjectHideFlags: 0
