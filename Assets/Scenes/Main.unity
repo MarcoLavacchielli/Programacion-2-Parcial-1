@@ -366,7 +366,7 @@ MonoBehaviour:
   thevigorCostOfMyCard: 0
   NombredelaCartadeVigoryEjecutarPasiva: 
   player: {fileID: 0}
-  stadisticplayerScipt: {fileID: 2034795155}
+  stadisticplayerScipt: {fileID: 0}
   enemyy: {fileID: 0}
 --- !u!114 &29717457
 MonoBehaviour:
@@ -7063,7 +7063,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh83296
+  m_Name: pb_Mesh22918
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7902,6 +7902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7669e53d3ae7e9a4686fdaafa1621cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stadisticPlayerScript: {fileID: 0}
 --- !u!114 &193172284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8064,7 +8065,7 @@ MonoBehaviour:
   thevigorCostOfMyCard: 0
   NombredelaCartadeVigoryEjecutarPasiva: 
   player: {fileID: 0}
-  stadisticplayerScipt: {fileID: 2034795155}
+  stadisticplayerScipt: {fileID: 0}
   enemyy: {fileID: 0}
 --- !u!114 &200995805
 MonoBehaviour:
@@ -8251,7 +8252,7 @@ MonoBehaviour:
   thevigorCostOfMyCard: 0
   NombredelaCartadeVigoryEjecutarPasiva: 
   player: {fileID: 0}
-  stadisticplayerScipt: {fileID: 2034795155}
+  stadisticplayerScipt: {fileID: 0}
   enemyy: {fileID: 0}
 --- !u!114 &256322633
 MonoBehaviour:
@@ -10078,7 +10079,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh83112
+  m_Name: pb_Mesh22708
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15428,7 +15429,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28622
+  m_Name: pb_Mesh23480
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16974,7 +16975,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh83776
+  m_Name: pb_Mesh23388
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18055,7 +18056,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh83892
+  m_Name: pb_Mesh23512
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18902,7 +18903,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28168
+  m_Name: pb_Mesh23026
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19249,7 +19250,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh83650
+  m_Name: pb_Mesh23262
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19837,7 +19838,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh83592
+  m_Name: pb_Mesh23206
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22586,17 +22587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c77a0e4092ed349ac62f62d597fa4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2034795155 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5403775076380772937, guid: 97bf9d8207519ce4d89143c227b3dd1f, type: 3}
-  m_PrefabInstance: {fileID: 8077958658333811773}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370d1b38e8da182478011df5a9167918, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2040130640
 GameObject:
   m_ObjectHideFlags: 0
@@ -23120,6 +23110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0189e30fd37a1448a7aaac435a1085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stadisticPlayerScript: {fileID: 0}
 --- !u!114 &2110229109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23650,10 +23641,6 @@ PrefabInstance:
       propertyPath: damageparticleSlot4
       value: 
       objectReference: {fileID: 526597663}
-    - target: {fileID: 5790167006782233436, guid: 97bf9d8207519ce4d89143c227b3dd1f, type: 3}
-      propertyPath: PlayerStadisticsScript
-      value: 
-      objectReference: {fileID: 2034795155}
     - target: {fileID: 5790167006782233436, guid: 97bf9d8207519ce4d89143c227b3dd1f, type: 3}
       propertyPath: carddisplayscriptinSlot1
       value: 

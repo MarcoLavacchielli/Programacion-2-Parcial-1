@@ -167,9 +167,8 @@ GameObject:
   - component: {fileID: 3787641334845275167}
   - component: {fileID: 4824398601918235940}
   - component: {fileID: 3162428869367982519}
-  - component: {fileID: 2831909129250575560}
   - component: {fileID: 6615082284677106671}
-  - component: {fileID: 5403775076380772937}
+  - component: {fileID: 2659961404095121032}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -316,7 +315,7 @@ MonoBehaviour:
   button5: {fileID: 0}
   button6: {fileID: 0}
   VigorDeckScript: {fileID: 5712986794260492655}
-  PlayerStadisticsScript: {fileID: 0}
+  PlayerStadisticsScript: {fileID: 2659961404095121032}
 --- !u!114 &7910656068851151482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,21 +407,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 5
   onFloor: 1
---- !u!114 &2831909129250575560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8077958657708868338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370d1b38e8da182478011df5a9167918, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 30
-  vigor: 40
-  defense: 0
 --- !u!114 &6615082284677106671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,9 +442,9 @@ MonoBehaviour:
   ScriptVigorCardDisplaySlot4: {fileID: 0}
   ScriptVigorCardDisplaySlot5: {fileID: 0}
   ScriptVigorCardDisplaySlot6: {fileID: 0}
-  stadisticPlayerScript: {fileID: 2831909129250575560}
+  stadisticPlayerScript: {fileID: 2659961404095121032}
   ContadorTransicion: 1
---- !u!114 &5403775076380772937
+--- !u!114 &2659961404095121032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
