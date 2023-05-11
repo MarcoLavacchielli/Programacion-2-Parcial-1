@@ -25,6 +25,7 @@ public class PlayerJumpFUNCIONAL : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && onFloor)
         {
             view.AnimJump();
+            AnimRealJump();
         }
     }
     public void AnimRealJump()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlataformaMovimiento : MonoBehaviour
 {
+
     [SerializeField] float speed;
     [SerializeField] List<Transform> waypoints;
     [SerializeField] float changeDirectionDelay;
@@ -81,3 +82,4 @@ public class PlataformaMovimiento : MonoBehaviour
         }
     }
 }
+
