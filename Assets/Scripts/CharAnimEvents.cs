@@ -9,6 +9,6 @@ public class CharAnimEvents : MonoBehaviour
 
     public void ANIMEV_Launch()
     {
-        //playerjumpfuncionalscript.AnimRealJump();
+        playerjumpfuncionalscript.AnimRealJump();
     }
 }

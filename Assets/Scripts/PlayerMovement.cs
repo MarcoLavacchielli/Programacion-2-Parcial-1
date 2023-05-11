@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
     {
         myRig = GetComponent<Rigidbody>();
         jumpy = GetComponent<PlayerJump>();
-
         view = GetComponent<Charview>();
     }
 

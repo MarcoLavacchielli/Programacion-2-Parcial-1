@@ -7,6 +7,7 @@ public class PlayerJumpFUNCIONAL : MonoBehaviour
     //public ParticleSystem dustJump;
 
     Rigidbody myRig;
+    private PlayerJump jumpy;
     public float jumpForce = 5;
     public bool onFloor = true;
 
@@ -15,21 +16,26 @@ public class PlayerJumpFUNCIONAL : MonoBehaviour
     void Awake()
     {
         myRig = GetComponent<Rigidbody>();
+        jumpy = GetComponent<PlayerJump>();
+        view = GetComponent<Charview>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && onFloor)
         {
-            //view.AnimJump();
-            Vector3 jumpDirection = transform.forward * myRig.velocity.magnitude;
-            jumpDirection.y = jumpForce;
-
-            myRig.velocity = jumpDirection;
-            onFloor = false;
-
-            //dustJump.Play();
+            view.AnimJump();
         }
+    }
+    public void AnimRealJump()
+    {
+        Vector3 jumpDirection = transform.forward * myRig.velocity.magnitude;
+        jumpDirection.y = jumpForce;
+
+        myRig.velocity = jumpDirection;
+        onFloor = false;
+
+        //dustJump.Play();
     }
 
     void OnCollisionEnter(Collision collision)
