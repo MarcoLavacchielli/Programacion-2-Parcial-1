@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
-  vigor: 40
+  vigor: 1
   defense: 0
 --- !u!1 &8077958658602386710
 GameObject:

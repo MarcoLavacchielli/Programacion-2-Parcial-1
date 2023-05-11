@@ -100,8 +100,7 @@ public class CombatPosition : MonoBehaviour
             enemiesreminder = 1;
             Enemy actualenemy = Instantiate(enemyGObj[Random.Range(0, enemyGObj.Count)], areaWhereTheEnemySpawns.transform.position, areaWhereTheEnemySpawns.transform.rotation).GetComponent<Enemy>();
             actualenemy.Setcombat(this);
-           // actualenemy.SetPlayer(stadisticPlayerScript);  ERROR
-
+            actualenemy.SetPlayer(stadisticPlayerScript);
             combatscript.setenemy(actualenemy);
             ScriptVigorCardDisplaySlot4.setenemy(actualenemy);
             ScriptVigorCardDisplaySlot5.setenemy(actualenemy);

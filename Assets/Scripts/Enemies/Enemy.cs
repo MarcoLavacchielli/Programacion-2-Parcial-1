@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     CombatPosition _combatposition;
     public int health;
     public string tipodeenemigo;
+    public StadisticPlayer PlayerStadisticsScript;
     public virtual void Start()
     {
         Enemyapears();
@@ -30,9 +31,9 @@ public class Enemy : MonoBehaviour
     {
         _combatposition = combatPosition;
     }
-    public void SetPlayer(Player playerreference)
+    public void SetPlayer(StadisticPlayer playerreference)
     {
-        player = playerreference;
+        PlayerStadisticsScript = playerreference;
     }
     public virtual void EnemyDies()
     {

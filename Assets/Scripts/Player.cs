@@ -47,6 +47,8 @@ public class Player : MonoBehaviour
     public int vigorPoints = 40;
     public float gravity = 9.8f;
 
+    public float _currenthealth;
+
     private void Awake()
     {
         //view = GetComponent<Charview>();
