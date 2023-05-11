@@ -41,6 +41,7 @@ public class CombatPosition : MonoBehaviour
         enemiesreminder--;
         if (enemiesreminder <= 0)
         {
+            Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             SwitchCamera(cameras[0]);
 
@@ -60,7 +61,7 @@ public class CombatPosition : MonoBehaviour
 
     public void combatON()
     {
-        
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
         SwitchCamera(cameras[1]);
         battlePosition = true;
