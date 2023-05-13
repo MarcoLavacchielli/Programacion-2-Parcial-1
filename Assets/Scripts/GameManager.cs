@@ -10,12 +10,12 @@ public class GameManager : MonoBehaviour
     public Image combatUI;
     public bool cardsEquiped = false;
     //Variables del mazo
-    public List<Card> deck = new List<Card>();
-    public Transform[] cardslots;
-    public bool[] availableCardSlots;
-    public Text deckSizeText;
+   // public List<Card> deck = new List<Card>();
+    //public Transform[] cardslots;
+    //public bool[] availableCardSlots;
+    //public Text deckSizeText;
     //PROFE si ve esto  es solo prueba del script de mazo, nada más
-    public void DrawCard()
+    /*public void DrawCard()
     {
         if (deck.Count >= 1)
         {
@@ -39,41 +39,7 @@ public class GameManager : MonoBehaviour
             //deckSizeText.text = deck.Count.ToString();
         //}
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    */
     private void Awake()
     {
         if (instance == null)
