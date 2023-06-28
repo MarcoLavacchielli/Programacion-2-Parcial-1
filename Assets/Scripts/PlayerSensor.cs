@@ -16,19 +16,25 @@ public class PlayerSensor : MonoBehaviour
     public Rigidbody playerRB;
     public List<CinemachineVirtualCamera> CamarasDoor;
     public CinemachineVirtualCamera ActiveCamera;
+    public MyCamera mycamera;
 
-    
+    public Light keyLight;
+
+    public ParticleSystem particleKey;
 
     private void OnTriggerEnter(Collider other)
     {
-        print("La puerta se abrio");
+        print("Found a key");
         if (IsPlayer(other))
         {
             SwitchCameraDoor(CamarasDoor[1]);
             player.enabled = false;
+            mycamera.canMoveCamera = false;
             playerRB.constraints = RigidbodyConstraints.FreezeAll;
             EV_OnPlayerEnter.Invoke();
             playerColl.enabled = false;
+            keyLight.enabled = false;
+            particleKey.Stop();
             StartCoroutine(CameraTransation());
         }
     }
@@ -64,13 +70,24 @@ public class PlayerSensor : MonoBehaviour
     {
         yield return new WaitForSeconds(DoorContador);
 
-        
-        player.enabled = true;
-        playerRB.constraints = RigidbodyConstraints.None;
-        playerRB.constraints = RigidbodyConstraints.FreezeRotation;
+        transition();
+        Invoke("Playerenabled", 2.5f);
+
+        yield return null;
+    }
+
+    void transition()
+    {
         SwitchCameraDoor(CamarasDoor[0]);
         EV_OnPlayerExit.Invoke();
 
-        yield return null;
+    }
+    void Playerenabled()
+    {
+        player.enabled = true;
+        playerRB.constraints = RigidbodyConstraints.None;
+        playerRB.constraints = RigidbodyConstraints.FreezeRotation;
+        mycamera.canMoveCamera = true;
+
     }
 }

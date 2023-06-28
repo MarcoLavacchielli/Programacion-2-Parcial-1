@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f473455261ea041469c433c48c5ee997
+guid: a0de05d030d441145b49a944c227c565
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Arissa_DIFF_diffuse
-    second: {fileID: 2800000, guid: a2c7eb3643c88444a9465e4b14b5b815, type: 3}
+    second: {fileID: 2800000, guid: eed5ac8599e8456489343e4426fa4024, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Arissa_NM_normal
-    second: {fileID: 2800000, guid: c30af544ef07bec45b8ade254a3ef0dd, type: 3}
+    second: {fileID: 2800000, guid: 744ab9b1c3d4b4b479ddc9b9d63ba176, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Arissa_SPEC_specular
-    second: {fileID: 2800000, guid: ded9d364aa60ab74a8130e4c837722fb, type: 3}
+    second: {fileID: 2800000, guid: 24d6d08fadcc2854aa21c28dd6805c6c, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -104,7 +104,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: mixamorig:Hips
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -112,7 +112,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0

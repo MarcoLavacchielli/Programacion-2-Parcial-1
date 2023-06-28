@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 686ca67d821488d4d88aad1a99fd728c
+guid: adfaad022894e6441bec478c209c9866
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Guard_03__diffuse
-    second: {fileID: 2800000, guid: ab019af40c6d2f849ad5f8ce3904f824, type: 3}
+    second: {fileID: 2800000, guid: 1864529d4b3f4b342a82707a0f3c7cf6, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Guard_03__normal
-    second: {fileID: 2800000, guid: cd78082cafe7e0041a64dee5de368114, type: 3}
+    second: {fileID: 2800000, guid: dc3610242eba7cb47be67381545d39b9, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Guard_03__specular
-    second: {fileID: 2800000, guid: 71ca49b196f1d51418b014a86241a9dd, type: 3}
+    second: {fileID: 2800000, guid: 1b94f327e7f90a248859c8a91fbc35d6, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -104,7 +104,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: mixamorig:Hips
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -112,7 +112,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0

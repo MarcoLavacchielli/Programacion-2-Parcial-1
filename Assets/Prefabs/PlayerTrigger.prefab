@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8693196539451545266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5542879, y: 0.29522377, z: 0.28050286}
+  m_LocalScale: {x: 0.67334896, y: 0.15420094, z: 0.28050286}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +63,7 @@ MonoBehaviour:
   EV_OnPlayerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1739695029856293157, guid: ed4e133e435ad4746a591ec8ff511cdc, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -102,7 +102,7 @@ MonoBehaviour:
   EV_OnPlayerExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3705839930550585576, guid: df925c492acbec349b685ed89f00be59, type: 3}
+      - m_Target: {fileID: 2665529480930371468, guid: c3da7253e6b43d44ab0acfc4b889fbdb, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -112,9 +112,9 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2665529480930371468, guid: c3da7253e6b43d44ab0acfc4b889fbdb, type: 3}
+      - m_Target: {fileID: 1739695029856293157, guid: ed4e133e435ad4746a591ec8ff511cdc, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -135,6 +135,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   ActiveCamera: {fileID: 0}
+  mycamera: {fileID: 0}
+  keyLight: {fileID: 0}
+  particleKey: {fileID: 0}
 --- !u!33 &5134942900894227951
 MeshFilter:
   m_ObjectHideFlags: 0

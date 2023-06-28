@@ -15,8 +15,4 @@ public class Charview : MonoBehaviour
     {
         myAnim.SetBool("isrunning", running);
     }
-    public void AnimJump()
-    {
-        myAnim.SetTrigger("jump");
-    }
 }

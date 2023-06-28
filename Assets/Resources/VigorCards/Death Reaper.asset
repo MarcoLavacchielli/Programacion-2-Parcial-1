@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f42e8829653e1c4dbfaf5c502342e4a, type: 3}
+  m_Name: Death Reaper
+  m_EditorClassIdentifier: 
+  name: Death Reaper
+  description: Gives you 7 points of <i><color=blue>vigor</color></i>. if enemy is
+    below 15 points of <i><color=green>health</color></i>, he gets insta-killed
+  image: {fileID: 21300000, guid: fd598ae051097ce44b0d759ca8112b95, type: 3}
+  vigorcost: 4

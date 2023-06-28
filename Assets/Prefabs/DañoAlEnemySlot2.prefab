@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 761731802098531700}
   - component: {fileID: 5568701411491732272}
   - component: {fileID: 8007137095189137545}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "Da\xF1oAlEnemySlot2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1363,7 +1363,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9056604, g: 0.7906936, b: 0.03844783, a: 1}
+        key0: {r: 1, g: 0.1462264, b: 0.22551616, a: 1}
         key1: {r: 0.4811321, g: 0.16113387, b: 0.21977246, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -4819,7 +4819,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c82a7f9e7d5d35c4bb82ba12d2ae0ad6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

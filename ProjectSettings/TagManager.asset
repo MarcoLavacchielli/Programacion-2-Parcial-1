@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Floor
+  - ObjetoColisionable
+  - ObjetoColisionable2
   layers:
   - Default
   - TransparentFX
@@ -16,16 +17,16 @@ TagManager:
   - doors locked
   - keys
   - MagicSeals
-  - Player
+  - player
   - PlayerSensor
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PatrolEnemy
+  - MagicSeals2
+  - MagicSeals3
+  - cajadecartas
+  - HealthPotions
+  - MagicSeal4
+  - BookOfBlood
+  - invisibleWall
   - 
   - 
   - 
@@ -41,4 +42,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cards
+    uniqueID: 3837463573
+    locked: 0
+  - name: CardSelected
+    uniqueID: 1819698327
     locked: 0

@@ -9,6 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 37fc7e8e182e39e46b55f4434ae168c6
   - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/LoadScene.unity
+    guid: f523e3a2141cdc540ae50387adabdc51
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: b22603640a82bea4e8afa3964bead13e
+  - enabled: 1
+    path: Assets/Scenes/LoadSceneFinalBattle.unity
+    guid: 553b9f5e9c671ad4dbf328fc37736e66
+  - enabled: 1
+    path: Assets/Scenes/NewZone.unity
+    guid: a961324e07496244b9787cd9b6490366
+  - enabled: 1
+    path: Assets/Scenes/LoseScene.unity
+    guid: 54d07f35607e4c542b65ad8b11545688
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: 7da81474e02339b4cbe5a38bcf6c43d7
   m_configObjects: {}

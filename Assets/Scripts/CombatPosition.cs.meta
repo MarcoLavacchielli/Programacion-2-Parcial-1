@@ -4,10 +4,23 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - enemyGObj: {instanceID: 0}
+  - enemyy: {instanceID: 0}
+  - combatscript: {instanceID: 0}
   - enemytransf: {instanceID: 0}
   - areaWhereTheEnemySpawns: {instanceID: 0}
+  - playerRB: {instanceID: 0}
   - mainCamera: {instanceID: 0}
+  - player: {instanceID: 0}
+  - ActiveCamera: {instanceID: 0}
+  - camerascript: {instanceID: 0}
+  - deckscript: {instanceID: 0}
+  - vigordeckscript: {instanceID: 0}
+  - ScriptVigorCardDisplaySlot4: {instanceID: 0}
+  - ScriptVigorCardDisplaySlot5: {instanceID: 0}
+  - ScriptVigorCardDisplaySlot6: {instanceID: 0}
+  - stadisticPlayerScript: {instanceID: 0}
+  - EnemyHealthPointsScript: {instanceID: 0}
+  - CardSwipe: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

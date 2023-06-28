@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 760b6cd3428c2ff498f239a4c0481dab
+guid: 59bd7539790c2744aa964a692fdc0db2
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Boss_diffuse
-    second: {fileID: 2800000, guid: c2f523d65ed47434da0e1f84fc697202, type: 3}
+    second: {fileID: 2800000, guid: e13f8429e0c428c4fbea35a3ec82e551, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Boss_normal
-    second: {fileID: 2800000, guid: 75994b3e7b725524c964011e1a02c640, type: 3}
+    second: {fileID: 2800000, guid: 4bbffee6c10a8394889afe73f81939d3, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Boss_specular
-    second: {fileID: 2800000, guid: 3cb288e97aff4a4409548fe5de4de5e5, type: 3}
+    second: {fileID: 2800000, guid: 693b97c5d73e91b40b3065f8e2874d23, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -104,7 +104,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: mixamorig:Hips
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -112,7 +112,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0

@@ -4,38 +4,86 @@ using UnityEngine;
 
 public class EnemySectarian : Enemy
 {
+    public Animator myAnim;
+    public override void Awake()
+    {
+        myAnim = GetComponent<Animator>();
+        base.Awake();
+    }
     public override void Start()
     {
         base.Start();
     }
     public override void Enemyturn()
     {
-        if (health <= 15 && health > 11)
+        if (health <= 30 && health > 20)
         {
-            BasicDamage();
+            int Numero = Random.Range(1, 101);
+            if (Numero >= 15)
+            {
+                BasicDamage();
+            }
+            else if (Numero < 15)
+            {
+                HeavyDamage();
+            }
         }
-        else if (health > 6 && health <= 11)
+        else if (health > 10 && health <= 20)
         {
-            HeavyDamage();
+            int Numero2 = Random.Range(1, 101);
+            if (Numero2 >= 20)
+            {
+                BasicDamage();
+            }
+            else if (Numero2 < 20)
+            {
+                HeavyDamage();
+            }
         }
-        else if (health > 0 && health <= 6)
+        else if (health > 0 && health <= 10)
         {
-            Regeneration();
+            int Numero3 = Random.Range(1, 101);
+            if (Numero3 >= 25)
+            {
+                BasicDamage();
+            }
+            else if (Numero3 < 25)
+            {
+                HeavyDamage();
+            }
+            if (Numero3 <= 15)
+            {
+                Regeneration();
+            }
         }
     }
     public void BasicDamage()
     {
-        PlayerStadisticsScript.health -= 3;
-        Debug.Log("El enemigo inflingio 3 de daño al jugador con un ataque basico");
+        myAnim.Play("Enemy S Attack");
+        PlayerStadisticsScript.health -= 2;
+        Debug.Log("The enemy dealt 2 damage to the player with a basic attack");
+        PlayBasicAttackParticles();
     }
     public void HeavyDamage()
     {
-        PlayerStadisticsScript.health -= 5;
-        Debug.Log("El enemigo inflingio 5 de daño al jugador con un golpe pesado");
+        myAnim.Play("Enemy S HAttack");
+        PlayerStadisticsScript.health -= 4;
+        Debug.Log("The enemy dealt 4 damage to the player with a heavy attack");
+        PlayHeavyAttackParticles();
     }
     public void Regeneration()
     {
-        health += 5;
-        Debug.Log("El enemigo se curo 5 de vida");
+        myAnim.Play("Enemy Health");
+        health += 4;
+        health -= PlayerStadisticsScript.antihealingToEnemies;
+        if (PlayerStadisticsScript.antihealingToEnemies > 0)
+        {
+            Debug.Log("Enemy got damage by Cursed Mud when tried to heal himself with 5 points of health");
+        }
+        else
+        {
+            Debug.Log("The enemy healed 4 points of health");
+            myAnim.Play("Enemy Health");
+        }
     }
 }

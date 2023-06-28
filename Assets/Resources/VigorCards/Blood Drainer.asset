@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f42e8829653e1c4dbfaf5c502342e4a, type: 3}
+  m_Name: Blood Drainer
+  m_EditorClassIdentifier: 
+  name: Blood Drainer
+  description: Deals <i><color=red>4 points</color></i> of damage. Every 3 uses you
+    get a <i><color=green>health potion</color></i>
+  image: {fileID: 21300000, guid: 8c53a1c15cf5d794fa7183e018432143, type: 3}
+  vigorcost: 1

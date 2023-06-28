@@ -7,18 +7,35 @@ using UnityEngine.SceneManagement;
 
 public class StadisticPlayer : MonoBehaviour
 {
-    public int health = 30;
+    public int health = 50;
     public int vigor = 1;
-    public int defense;
+    public int damageReduction;
+    public int bloodFontPassive;
+    public int healingRingPassive;
+    public int antihealingToEnemies;
+    public int bloodFontAditionalDamage;
+    public int SpiritGrowthStacks;
+    public int ProtectionTottemStacks;
+    public int bloodDrainerCounter;
+    public GameManager _myGM;
+    
+    public void Update()
+    {
+        if (health > 50)
+        {
+            health = 50;
+        }
 
-
+        if (health <= 0)
+        {
+            PlayerDies();
+        }
+      
+    }
 
     public void PlayerDies()
     {
-        if (health <= 0)
-        {
-            SceneManager.LoadScene("Main");
-        }
+        SceneManager.LoadScene("LoseScene");
+        Cursor.lockState = CursorLockMode.Confined;
     }
-
 }

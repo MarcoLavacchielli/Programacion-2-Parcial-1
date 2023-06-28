@@ -8,14 +8,27 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     Player player;
     public Image combatUI;
+    public Image Inventory;
     public bool cardsEquiped = false;
+    public bool inventoryactive = false;
     //Variables del mazo
-   // public List<Card> deck = new List<Card>();
-    //public Transform[] cardslots;
-    //public bool[] availableCardSlots;
-    //public Text deckSizeText;
+    public List<Card> deck = new List<Card>();
+    public Transform[] cardslots;
+    public bool[] availableCardSlots;
+    public Text deckSizeText;
+    //private bool activatePauseMenu = false;   ME DICE EL CONSOLE QUE ESTA VARIABLE NUNCA SE USA Y LO COMENTÉ  ~Facu
+
+
+    public bool gameispaused;
+    public Image PauseMenu;
+    public GameObject Menu;
+    public GameObject controls;
+    public MyCamera camerascript;
+    public Rigidbody playerRB;
+
+
     //PROFE si ve esto  es solo prueba del script de mazo, nada más
-    /*public void DrawCard()
+    public void DrawCard()
     {
         if (deck.Count >= 1)
         {
@@ -34,12 +47,12 @@ public class GameManager : MonoBehaviour
             }
         }
 
-       //  void Update()
+        //  void Update()
         //{
-            //deckSizeText.text = deck.Count.ToString();
+        //deckSizeText.text = deck.Count.ToString();
         //}
     }
-    */
+
     private void Awake()
     {
         if (instance == null)
@@ -54,7 +67,6 @@ public class GameManager : MonoBehaviour
     }
     public Player Player()
     {
-        
         {
             return player;
         }
@@ -64,7 +76,6 @@ public class GameManager : MonoBehaviour
         get
         {
             return instance.player.transform;
-
         }
 
     }
@@ -73,6 +84,41 @@ public class GameManager : MonoBehaviour
     {
         cardsEquiped = !cardsEquiped;
         combatUI.gameObject.SetActive(cardsEquiped);
-
+    }
+    public void Activeinventory()
+    {
+        PauseGame();
+        Inventory.gameObject.SetActive(true);
+    }
+    public void DesactivateInventory()
+    {
+        PlayGame();
+        Inventory.gameObject.SetActive(false);
+    }
+    public void Menuactivate()
+    {
+        PauseGame();
+        Menu.gameObject.SetActive(true);
+    }
+    public void Menudesactivate()
+    {
+        PlayGame();
+        Menu.gameObject.SetActive(false);
+    }
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+    public void PlayGame()
+    {
+        Time.timeScale = 1;
+    }
+    public void Showcontrols()
+    {
+        controls.gameObject.SetActive(true);
+    }
+    public void Hidecontrols()
+    {
+        controls.gameObject.SetActive(false);
     }
 }
