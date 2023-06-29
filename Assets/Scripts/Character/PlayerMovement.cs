@@ -38,6 +38,17 @@ public class PlayerMovement : MonoBehaviour
             // Apply movement velocity only on the x and z axes
             Vector3 horizontalMove = moveDirection * speed * Time.deltaTime;
             myRig.velocity = new Vector3(horizontalMove.x, myRig.velocity.y, horizontalMove.z);
+
+            // Check if there is any movement
+            float movementThreshold = 0.1f; // Adjust this threshold to your needs
+            if (horizontalMove.magnitude > movementThreshold)
+            {
+                view.Isrunning(true);
+            }
+            else
+            {
+                view.Isrunning(false);
+            }
         }
         else // If the player is in the air
         {
@@ -46,5 +57,4 @@ public class PlayerMovement : MonoBehaviour
             myRig.velocity = new Vector3(move.x, myRig.velocity.y, move.z);
         }
     }
-
 }
