@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ObjetoColisionable
   - ObjetoColisionable2
+  - Floor
   layers:
   - Default
   - TransparentFX

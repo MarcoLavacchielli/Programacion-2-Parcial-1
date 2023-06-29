@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
 
         setGravity();
 
-        player.Move(movePLayer * playerspeed * Time.deltaTime);
+        //player.Move(movePLayer * playerspeed * Time.deltaTime);
 
         if (movePLayer.magnitude > 0.3f)
         {
