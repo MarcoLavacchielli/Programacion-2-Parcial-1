@@ -15,4 +15,8 @@ public class Charview : MonoBehaviour
     {
         myAnim.SetBool("isrunning", running);
     }
+    public void Salto(bool saltar)
+    {
+        myAnim.SetBool("Salto", saltar);
+    }
 }
