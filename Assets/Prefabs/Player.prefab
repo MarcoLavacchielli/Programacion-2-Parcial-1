@@ -250,7 +250,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8077958657708868334}
-  - component: {fileID: 8077958657708868335}
   - component: {fileID: 8077958657708868332}
   - component: {fileID: 8077958657708868333}
   - component: {fileID: 2164653984255317432}
@@ -291,30 +290,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8077958657708868335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8077958657708868338}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77cb29c30c68d77478505583e1e35024, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizonalMove: 0
-  verticalMove: 0
-  mainCamera: {fileID: 0}
-  menumanagerscript: {fileID: 0}
-  player: {fileID: 2164653984255317432}
-  playerspeed: 5
-  _maxhealth: 30
-  vigorPoints: 40
-  gravity: 9.8
-  _currenthealth: 0
-  nombreEscenaACargar: LoadSceneFinalBattle
-  nombreEscenaACargar2: WInScene
 --- !u!54 &8077958657708868332
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -441,7 +416,7 @@ MonoBehaviour:
   enemyInvoke: 0
   playerRB: {fileID: 8077958657708868332}
   mainCamera: {fileID: 0}
-  player: {fileID: 8077958657708868335}
+  player: {fileID: 0}
   cameras:
   - {fileID: 0}
   - {fileID: 0}
