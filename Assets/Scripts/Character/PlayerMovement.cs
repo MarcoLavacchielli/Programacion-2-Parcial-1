@@ -39,14 +39,15 @@ public class PlayerMovement : MonoBehaviour
             Vector3 horizontalMove = moveDirection * speed * Time.deltaTime;
             myRig.velocity = new Vector3(horizontalMove.x, myRig.velocity.y, horizontalMove.z);
 
-            // Check if there is any movement
-            float movementThreshold = 0.1f; // Adjust this threshold to your needs
-            if (horizontalMove.magnitude > movementThreshold)
+            // Check for movement
+            if (horizontalMove.magnitude > 0.1f)
             {
+                // There is movement, play animation
                 view.Isrunning(true);
             }
             else
             {
+                // No movement, pause animation
                 view.Isrunning(false);
             }
         }
@@ -55,6 +56,9 @@ public class PlayerMovement : MonoBehaviour
             // Apply movement velocity in the movement direction
             Vector3 move = moveDirection * speed * Time.deltaTime;
             myRig.velocity = new Vector3(move.x, myRig.velocity.y, move.z);
+
+            // Pause animation in the air
+            view.Isrunning(false);
         }
     }
 }
