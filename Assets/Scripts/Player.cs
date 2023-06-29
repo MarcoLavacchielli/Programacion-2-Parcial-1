@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private Vector3 camRight;
     private Vector3 movePLayer;
     
-    Charview view;
+    //Charview view;
     public MenuManager menumanagerscript;
 
     public CharacterController player;
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        view = GetComponent<Charview>();
+        //view = GetComponent<Charview>();
     }
     private void Start()
     {
@@ -60,14 +60,14 @@ public class Player : MonoBehaviour
 
         //player.Move(movePLayer * playerspeed * Time.deltaTime);
 
-        if (movePLayer.magnitude > 0.3f)
+        /*if (movePLayer.magnitude > 0.3f)
         {
             view.Isrunning(true);
         }
         else
         {
             view.Isrunning(false);
-        }
+        }*/
 
 
     }
