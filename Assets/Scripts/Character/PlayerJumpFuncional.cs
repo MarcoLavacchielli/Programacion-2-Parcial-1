@@ -14,12 +14,14 @@ public class PlayerJumpFuncional : MonoBehaviour
     {
         myRig = GetComponent<Rigidbody>();
         //jumpy = GetComponent<PlayerJumpFuncional>();
+        view = GetComponent<Charview>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && onFloor == true)
         {
+            view.Salto(true);
             AnimRealJump();
             onFloor = false;
         }
@@ -35,6 +37,7 @@ public class PlayerJumpFuncional : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        view.Salto(false);
         if (collision.gameObject.tag == "Floor")
         {
             onFloor = true;
