@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class inventoryObjectsActions : MonoBehaviour
 {
@@ -44,11 +45,14 @@ public class inventoryObjectsActions : MonoBehaviour
 
     public Light demonWhispersLight;
 
-    
 
     public Animator animationDoor;
 
     public Animator playerAnimator;
+
+    public Image newCardObtainedImage;
+    public CanvasGroup newCardCanvasGroup;
+    private bool ifNewCardFeedbackIsActive = false;
     private void Awake()
     {
         MyAudioSource = GetComponent<AudioSource>();
@@ -59,6 +63,31 @@ public class inventoryObjectsActions : MonoBehaviour
     {
         MyAudioSource.clip = AC;
         MyAudioSource.Play();
+    }
+    public void NewCardFeedBack()
+    {
+        if (ifNewCardFeedbackIsActive == false)
+        {
+            StartCoroutine(NewCardUIFade());
+
+        }
+    }
+
+    IEnumerator NewCardUIFade()
+    {
+        ifNewCardFeedbackIsActive = true;
+        newCardObtainedImage.gameObject.SetActive(true);
+        float alpha = 1;
+        while (alpha >= 0)
+        {
+            alpha -= 0.2f;
+            yield return new WaitForEndOfFrame();
+            newCardCanvasGroup.alpha = alpha;
+        }
+        newCardObtainedImage.gameObject.SetActive(false);
+        newCardCanvasGroup.alpha = 1;
+        ifNewCardFeedbackIsActive = false;
+        yield return null;
     }
     void Update()
     {
@@ -93,6 +122,7 @@ public class inventoryObjectsActions : MonoBehaviour
             cardsOnInventory[CardsOnCountdown].gameObject.SetActive(ActivatorsOfCards[CardsOnCountdown]);
             PlayAudioInventory(newCard);
             Debug.Log("You have obtained a new card [i] to see the inventory");
+            NewCardFeedBack();
             /*if (inventoryTutorialTrigger == false)
             {
                 inventoryTutorialTrigger = true;
@@ -108,8 +138,8 @@ public class inventoryObjectsActions : MonoBehaviour
             healthPotionLight.enabled = false;
             healthPotionParticles.Stop();
             healthPotionMiniParticles.Stop();
-           
-            
+
+
             Debug.Log("You obtained a healing potion, you can only use it in combat by pressing the H key or its corresponding button");
         }
 
@@ -144,12 +174,12 @@ public class inventoryObjectsActions : MonoBehaviour
         }
         if (other.gameObject.layer == 7)
         {
-           
+
             //puerta
             if (KeyForTheBlackDoor == 1)
             {
                 animationDoor.SetBool("PlayAnimation", true);
-                
+
                 animationDoor.CrossFade("AnimationDoor", 0f);
                 // Destroy(other.gameObject);
                 Destroy(DoorHolder);
