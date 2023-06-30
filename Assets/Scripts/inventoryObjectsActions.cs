@@ -39,6 +39,10 @@ public class inventoryObjectsActions : MonoBehaviour
 
     public ParticleSystem healthPotionMiniParticles;
 
+    public ParticleSystem demonWhispersParticles;
+
+    public ParticleSystem cardBoxesparticles;
+
     public Light healthPotionLight;
 
     public Light lightCardbox;
@@ -202,10 +206,12 @@ public class inventoryObjectsActions : MonoBehaviour
     {
         if (other.gameObject.layer == 15)
         {
+            cardBoxesparticles.Stop();
             lightCardbox.enabled = false;
         }
         if (other.gameObject.layer == 6)
         {
+            demonWhispersParticles.Stop();
             demonWhispersLight.enabled = false;
         }
     }
