@@ -159,7 +159,7 @@ public class VigorCardsDisplay : MonoBehaviour
             case "Protection Tottem":
                
                 stadisticplayerScipt.health += 1;
-                //inventoryObjectsScript.HealthPotionParticles.Play();
+                inventoryObjectsScript.HealthPotionParticles.Play();
                 protectiontottempasive();
                 Debug.Log("You have healed 1 point of health");
                 stadisticplayerScipt.ProtectionTottemStacks += 1;
