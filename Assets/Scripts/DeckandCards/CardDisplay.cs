@@ -122,7 +122,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageParticleSlot1Combate2.Play();
                 combatScript.damageParticleSlot1_Combate3.Play();
                 combatScript.damageParticleSlot1_Combate4.Play();
-
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 StatsPlayerScript.health += 5;
                 StatsPlayerScript.health += StatsPlayerScript.healingRingPassive;
                 BloodFont();
@@ -137,6 +137,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageParticleSlot2Combate2.Play();
                 combatScript.damageParticleSlot2_Combate3.Play();
                 combatScript.damageParticleSlot2_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 BloodFont();
                 PlayAudio(BigBangAudio);
                 break;
@@ -145,6 +146,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageParticleSlot3Combate2.Play();
                 combatScript.damageParticleSlot3_Combate3.Play();
                 combatScript.damageParticleSlot3_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 BloodFont();
                 PlayAudio(fireExplosionAudio);
                 break;
@@ -153,6 +155,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot4Combate2.Play();
                 combatScript.damageparticleSlot4_Combate3.Play();
                 combatScript.damageparticleSlot4_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 BloodFont();
                 PlayAudio(DestructionAudio);
                 break;
@@ -161,6 +164,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot5Combate2.Play();
                 combatScript.damageparticleSlot5_Combate3.Play();
                 combatScript.damageparticleSlot5_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 BloodFont();
                 PlayAudio(komori);
                 break;
@@ -169,6 +173,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot6Combate2.Play();
                 combatScript.damageparticleSlot6_Combate3.Play();
                 combatScript.damageparticleSlot6_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 PlayAudio(komori);
                 BloodFont();
                 break;
@@ -177,6 +182,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot7Combate2.Play();
                 combatScript.damageparticleSlot7_Combate3.Play();
                 combatScript.damageparticleSlot7_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 BloodFont();
                 PlayAudio(railgun);
                 break;
@@ -185,6 +191,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot8Combate2.Play();
                 combatScript.damageparticleSlot8_Combate3.Play();
                 combatScript.damageparticleSlot8_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 BloodFont();
                 PlayAudio(musicBox);
                 break;
@@ -193,6 +200,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot9Combate2.Play();
                 combatScript.damageparticleSlot9_Combate3.Play();
                 combatScript.damageparticleSlot9_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 StatsPlayerScript.bloodFontAditionalDamage += 1;
                 PlayAudio(audiosArray[0]);
                 BloodFont();
@@ -202,6 +210,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot10Combate2.Play();
                 combatScript.damageparticleSlot10_Combate3.Play();
                 combatScript.damageparticleSlot10_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 StatsPlayerScript.health += StatsPlayerScript.vigor;
                 if (StatsPlayerScript.vigor >= 0)
                 {
@@ -217,6 +226,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot11Combate2.Play();
                 combatScript.damageparticleSlot11_Combate3.Play();
                 combatScript.damageparticleSlot11_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 PlayAudio(audiosArray[2]);
                 BloodFont();
                 if (StatsPlayerScript.antihealingToEnemies <= 6)
@@ -235,6 +245,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot12Combate2.Play();
                 combatScript.damageparticleSlot12_Combate3.Play();
                 combatScript.damageparticleSlot12_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 float PorcentageReduction = enemyy.health * 0.25f;
                 int ResultRounded = (int)Math.Round(PorcentageReduction);
                 enemyy.health -= ResultRounded;
@@ -247,6 +258,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot13Combate2.Play();
                 combatScript.damageparticleSlot13_Combate3.Play();
                 combatScript.damageparticleSlot13_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 StatsPlayerScript.healingRingPassive += 1;
                 inventoryObjectsScript.HealthPotionParticles.Play();
                 Debug.Log("You got a stack of Healing Ring");
@@ -258,6 +270,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot14Combate2.Play();
                 combatScript.damageparticleSlot14_Combate3.Play();
                 combatScript.damageparticleSlot14_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 if (StatsPlayerScript.damageReduction <= 2)
                 {
                     StatsPlayerScript.damageReduction += 1;
@@ -275,6 +288,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot15Combate2.Play();
                 combatScript.damageparticleSlot15_Combate3.Play();
                 combatScript.damageparticleSlot15_Combate4.Play();
+                combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 enemyy.health -= StatsPlayerScript.vigor;
                 Debug.Log("You damage your enemy equal to the amount of vigor you have");
                 PlayAudio(audiosArray[6]);

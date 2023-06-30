@@ -192,6 +192,7 @@ public class Combat : MonoBehaviour
 
     public Animator VigorCardsAnimation;
     public Animator NormalCardsAnimation;
+    public Animator combatUIAnimator;
 
     public int devilEyesPassive;
 
@@ -303,7 +304,7 @@ public class Combat : MonoBehaviour
             button4.interactable = true;
             button5.interactable = true;
             button6.interactable = true;
-
+            combatUIAnimator.CrossFade("HearthAnimation", 0f);
             enemyy.Enemyturn();
             playerAnimator.Play("RecibirDaño");
             //contador = 0;
