@@ -4928,7 +4928,7 @@ MonoBehaviour:
   absortionLength: 8
   playerLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 2147483647
 --- !u!1001 &2061750799382090896
 PrefabInstance:
   m_ObjectHideFlags: 0
