@@ -84,7 +84,7 @@ public class inventoryObjectsActions : MonoBehaviour
         float alpha = 1;
         while (alpha >= 0)
         {
-            alpha -= 0.006f;
+            alpha -= 0.010f;
             yield return new WaitForEndOfFrame();
             newCardCanvasGroup.alpha = alpha;
         }
