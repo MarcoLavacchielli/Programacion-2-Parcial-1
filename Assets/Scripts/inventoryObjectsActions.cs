@@ -84,13 +84,14 @@ public class inventoryObjectsActions : MonoBehaviour
         float alpha = 1;
         while (alpha >= 0)
         {
-            alpha -= 0.2f;
+            alpha -= 0.1f;
             yield return new WaitForEndOfFrame();
             newCardCanvasGroup.alpha = alpha;
         }
         newCardObtainedImage.gameObject.SetActive(false);
         newCardCanvasGroup.alpha = 1;
         ifNewCardFeedbackIsActive = false;
+
         yield return null;
     }
     void Update()
