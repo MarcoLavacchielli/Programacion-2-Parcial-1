@@ -43,6 +43,8 @@ public class VigorCardsDisplay : MonoBehaviour
 
     public Image notUsable;
 
+    public inventoryObjectsActions inventoryObjectsScript;
+
     public void PlayAudio(AudioClip AC)
     {
         MyAudioSource.clip = AC;
@@ -96,10 +98,8 @@ public class VigorCardsDisplay : MonoBehaviour
         switch (NombredelaCartadeVigoryEjecutarPasiva)
         {
             case "Warrior Pendant":
-                combatScript.damageparticleSlot16.Play();
-                combatScript.damageparticleSlot16Combate2.Play();
-                combatScript.damageparticleSlot16_Combate3.Play();
-                combatScript.damageparticleSlot16_Combate4.Play();
+                
+                inventoryObjectsScript.HealthPotionParticles.Play();
                 stadisticplayerScipt.health += 8;
                 protectiontottempasive();
                 PlayAudio(WarriorPendantAudio);
@@ -110,6 +110,7 @@ public class VigorCardsDisplay : MonoBehaviour
                 combatScript.damageparticleSlot17Combate2.Play();
                 combatScript.damageparticleSlot17_Combate3.Play();
                 combatScript.damageparticleSlot17_Combate4.Play();
+                
                 protectiontottempasive();
                 enemyy.health -= 4;
                 PlayAudio(arrowhit);
@@ -156,11 +157,9 @@ public class VigorCardsDisplay : MonoBehaviour
                 Debug.Log("You have increase your vigor in 5 points");
                 break;
             case "Protection Tottem":
-                combatScript.damageparticleSlot21.Play();
-                combatScript.damageparticleSlot21Combate2.Play();
-                combatScript.damageparticleSlot21_Combate3.Play();
-                combatScript.damageparticleSlot21_Combate4.Play();
+               
                 stadisticplayerScipt.health += 1;
+                //inventoryObjectsScript.HealthPotionParticles.Play();
                 protectiontottempasive();
                 Debug.Log("You have healed 1 point of health");
                 stadisticplayerScipt.ProtectionTottemStacks += 1;
@@ -192,6 +191,7 @@ public class VigorCardsDisplay : MonoBehaviour
                 combatScript.damageparticleSlot23_Combate3.Play();
                 combatScript.damageparticleSlot23_Combate4.Play();
                 enemyy.health -= 7;
+                inventoryObjectsScript.HealthPotionParticles.Play();
                 stadisticplayerScipt.health += 3;
                 protectiontottempasive();
                 PlayAudio(DeadEyeAudio);
@@ -204,6 +204,7 @@ public class VigorCardsDisplay : MonoBehaviour
                 combatScript.damageparticleSlot24_Combate3.Play();
                 combatScript.damageparticleSlot24_Combate4.Play();
                 enemyy.health -= 3;
+                inventoryObjectsScript.HealthPotionParticles.Play();
                 PlayAudio(healUp);
                 stadisticplayerScipt.health += 3;
                 protectiontottempasive();
@@ -267,17 +268,16 @@ public class VigorCardsDisplay : MonoBehaviour
                 Debug.Log("You have done the difference of health between you and your oponent as damage");
                 break;
             case "Balance of Life":
-                combatScript.damageparticleSlot29.Play();
-                combatScript.damageparticleSlot29Combate2.Play();
+                
                 protectiontottempasive();
-                combatScript.damageparticleSlot29_Combate3.Play();
-                combatScript.damageparticleSlot29_Combate4.Play();
+                
                 PlayAudio(audiosVigorArray[2]);
                 int u = enemyy.health - stadisticplayerScipt.health;
                 if (u < 0)
                 {
                     u *= -1;
                     stadisticplayerScipt.health += u;
+                    inventoryObjectsScript.HealthPotionParticles.Play();
                 }
                 else
                 {
@@ -320,22 +320,20 @@ public class VigorCardsDisplay : MonoBehaviour
                 }
                 break;
             case "Devil Eyes":
-                combatScript.damageparticleSlot32.Play();
-                combatScript.damageparticleSlot32Combate2.Play();
+               
                 protectiontottempasive();
                 PlayAudio(audiosVigorArray[5]);
-                combatScript.damageparticleSlot32_Combate3.Play();
-                combatScript.damageparticleSlot32_Combate4.Play();
+                
+                inventoryObjectsScript.HealthPotionParticles.Play();
                 stadisticplayerScipt.health += combatScript.devilEyesPassive;
                 Debug.Log("You have damage your enemy with"+combatScript.devilEyesPassive+" points of damage");
                 break;
             case "Evil Pendant":
-                combatScript.damageparticleSlot33.Play();
-                combatScript.damageparticleSlot33Combate2.Play();
+                
                 protectiontottempasive();
                 PlayAudio(audiosVigorArray[6]);
-                combatScript.damageparticleSlot33_Combate3.Play();
-                combatScript.damageparticleSlot33_Combate4.Play();
+                
+                inventoryObjectsScript.HealthPotionParticles.Play();
                 stadisticplayerScipt.health += 7;
                 stadisticplayerScipt.vigor += 6;
                 Debug.Log("You have increase your vigor in 6 points and you healed yourself in 7 points");
@@ -383,6 +381,7 @@ public class VigorCardsDisplay : MonoBehaviour
     {
         if (stadisticplayerScipt.ProtectionTottemStacks >= 5)
         {
+            inventoryObjectsScript.HealthPotionParticles.Play();
             stadisticplayerScipt.health += 1;
         }
 

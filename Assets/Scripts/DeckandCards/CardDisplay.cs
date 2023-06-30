@@ -40,6 +40,7 @@ public class CardDisplay : MonoBehaviour
 
     public Image notUsable;
 
+    public inventoryObjectsActions inventoryObjectsScript;
 
     private void Start()
     {
@@ -125,6 +126,8 @@ public class CardDisplay : MonoBehaviour
                 StatsPlayerScript.health += 5;
                 StatsPlayerScript.health += StatsPlayerScript.healingRingPassive;
                 BloodFont();
+                inventoryObjectsScript.HealthPotionParticles.Play();
+
                 PlayAudio(komori);
                 Debug.Log("You healed");
                 break;
@@ -200,6 +203,11 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot10_Combate3.Play();
                 combatScript.damageparticleSlot10_Combate4.Play();
                 StatsPlayerScript.health += StatsPlayerScript.vigor;
+                if (StatsPlayerScript.vigor >= 0)
+                {
+
+                    inventoryObjectsScript.HealthPotionParticles.Play();
+                }
                 PlayAudio(audiosArray[1]);
                 StatsPlayerScript.health += StatsPlayerScript.healingRingPassive;
                 BloodFont();
@@ -240,6 +248,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot13_Combate3.Play();
                 combatScript.damageparticleSlot13_Combate4.Play();
                 StatsPlayerScript.healingRingPassive += 1;
+                inventoryObjectsScript.HealthPotionParticles.Play();
                 Debug.Log("You got a stack of Healing Ring");
                 BloodFont();
                 PlayAudio(audiosArray[4]);
@@ -254,7 +263,7 @@ public class CardDisplay : MonoBehaviour
                     StatsPlayerScript.damageReduction += 1;
                     Debug.Log("You got a stack of nemea Breastplate");
                 }
-                else if(StatsPlayerScript.damageReduction > 2)
+                else if (StatsPlayerScript.damageReduction > 2)
                 {
                     Debug.Log("You already got the stacks of nemea Breastplate");
                 }

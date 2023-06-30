@@ -660,6 +660,7 @@ MonoBehaviour:
   devilEyesPassive: 0
   playerAnimator: {fileID: 6633360425303154989}
   counterForDrawButton: 0
+  inventoryObjectsScript: {fileID: 5561988426673552123}
 --- !u!114 &7910656068851151482
 MonoBehaviour:
   m_ObjectHideFlags: 0

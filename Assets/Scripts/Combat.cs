@@ -199,6 +199,7 @@ public class Combat : MonoBehaviour
 
     public int counterForDrawButton;
 
+    public inventoryObjectsActions inventoryObjectsScript;
 
     void Start()
     {
@@ -353,6 +354,7 @@ public class Combat : MonoBehaviour
             PlayerStadisticsScript.health += PlayerStadisticsScript.damageReduction;
             if (PlayerStadisticsScript.damageReduction > 0)
             {
+                inventoryObjectsScript.HealthPotionParticles.Play();
                 PlayerStadisticsScript.health += PlayerStadisticsScript.healingRingPassive;
             }
         }
