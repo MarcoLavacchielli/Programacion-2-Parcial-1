@@ -45,6 +45,13 @@ public class VigorCardsDisplay : MonoBehaviour
 
     public inventoryObjectsActions inventoryObjectsScript;
 
+
+    public void EmptySlot()
+    {
+        card = null;
+        nametext = null;
+        NombredelaCartadeVigoryEjecutarPasiva = null;
+    }
     public void PlayAudio(AudioClip AC)
     {
         MyAudioSource.clip = AC;

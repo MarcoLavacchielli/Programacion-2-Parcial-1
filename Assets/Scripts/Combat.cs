@@ -471,6 +471,66 @@ public class Combat : MonoBehaviour
             TheCanvasesForFade[i].alpha = 1;
         }
     }
+    public void DrawCardsStartCombat()
+    {
+        deckscript.DrawCards();
+        VigorDeckScript.DrawCards();
+        cardOrange1.gameObject.SetActive(true);
+        cardOrange2.gameObject.SetActive(true);
+        cardOrange3.gameObject.SetActive(true);
+        cardOrange4.gameObject.SetActive(true);
+        cardOrange5.gameObject.SetActive(true);
+        cardOrange6.gameObject.SetActive(true);
+        cartafueUsada = true;
+        cartafueUsada2 = true;
+        cartafueUsada3 = true;
+        cartafueUsada4 = true;
+        cartafueUsada5 = true;
+        cartafueUsada6 = true;
+        button1.interactable = true;
+        button2.interactable = true;
+        button3.interactable = true;
+        button4.interactable = true;
+        button5.interactable = true;
+        button6.interactable = true;
+        for(int i = 0; i <= 5; i++)
+        {
+            TheCanvasesForFade[i].alpha = 1;
+        }
+    }
+
+    public void EmptyHandAtEndOfCombat()
+    {
+       
+        /*carddisplayscriptinSlot1.EmptySlot();
+        carddisplayscriptinSlot2.EmptySlot();
+        carddisplayscriptinSlot3.EmptySlot();
+        carddisplayscriptinSlot4.EmptySlot();
+        carddisplayscriptinSlot5.EmptySlot();
+        carddisplayscriptinSlot6.EmptySlot();
+
+        deckscript.SlotBool1 = false;
+        deckscript.SlotBool2 = false;
+        deckscript.SlotBool3 = false;
+        VigorDeckScript.SlotBool4 = false;
+        VigorDeckScript.SlotBool5 = false;
+        VigorDeckScript.SlotBool6 = false;*/
+
+
+        cardOrange1.gameObject.SetActive(false);
+        cardOrange2.gameObject.SetActive(false);
+        cardOrange3.gameObject.SetActive(false);
+        cardOrange4.gameObject.SetActive(false);
+        cardOrange5.gameObject.SetActive(false);
+        cardOrange6.gameObject.SetActive(false);
+
+        button1.interactable = false;
+        button2.interactable = false;
+        button3.interactable = false;
+        button4.interactable = false;
+        button5.interactable = false;
+        button6.interactable = false;
+    }
     IEnumerator FadeAnimSlot1(int myplace)
     {
         float alpha = 1;

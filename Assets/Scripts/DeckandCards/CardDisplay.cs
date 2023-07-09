@@ -42,6 +42,13 @@ public class CardDisplay : MonoBehaviour
 
     public inventoryObjectsActions inventoryObjectsScript;
 
+
+    public void EmptySlot()
+    {
+        card = null;
+        nametext = null;
+        NombredelaCartayEjecutarPasiva = null;
+    }
     private void Start()
     {
 

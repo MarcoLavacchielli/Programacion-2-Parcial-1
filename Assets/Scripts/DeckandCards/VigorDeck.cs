@@ -17,6 +17,7 @@ public class VigorDeck : MonoBehaviour
     public VigorCards[] DeckOfTheVigorDeck;
     public bool[] EquipOrUnequipTheCardBool;
     public List<VigorCards> TrueVigorDeckInCombat = new List<VigorCards>();
+
    
 
     private void Awake()
@@ -31,12 +32,24 @@ public class VigorDeck : MonoBehaviour
     }
     public void CreateListOfMyVigorCardsBuildForCombat()
     {
+        //int F;
+        //F = DeckOfTheVigorDeck.Length;
+        //TrueVigorDeckInCombat = F;
         foreach (VigorCards objeto in DeckOfTheVigorDeck)
         {
             if (objeto != null)
             {
                 TrueVigorDeckInCombat.Add(objeto);
             }
+        }
+        TrueVigorDeckInCombat.RemoveAll(item => item == null);
+    }
+
+    public void EmptyListOfMyVigorCardsBuildForCombat()
+    {
+        for (int i = 0; i < TrueVigorDeckInCombat.Count; i++)
+        {
+            TrueVigorDeckInCombat[i] = null;
         }
     }
 
