@@ -202,6 +202,8 @@ public class Combat : MonoBehaviour
 
     public inventoryObjectsActions inventoryObjectsScript;
 
+    public Image AguileBlockerImage;
+
     void Start()
     {
 
@@ -694,6 +696,7 @@ public class Combat : MonoBehaviour
     {
         if (carddisplayscriptinSlot1.myslot == 1 && playercontador == 0)
         {
+            AguileBlockerImage.gameObject.SetActive(false);
             StartCoroutine(FadeAnimSlot1(0));
 
             //NormalCardsAnimation.CrossFade("CardAlreadyUsed", 0f);
@@ -705,6 +708,7 @@ public class Combat : MonoBehaviour
     {
         if (carddisplayscriptinSlot2.myslot == 2 && playercontador == 0)
         {
+            AguileBlockerImage.gameObject.SetActive(false);
             StartCoroutine(FadeAnimSlot2(1));
 
             //NormalCardsAnimation.CrossFade("CardAlreadyUsed2_", 0f);
@@ -716,6 +720,7 @@ public class Combat : MonoBehaviour
     {
         if (carddisplayscriptinSlot3.myslot == 3 && playercontador == 0)
         {
+            AguileBlockerImage.gameObject.SetActive(false);
             StartCoroutine(FadeAnimSlot3(2));
 
             //NormalCardsAnimation.CrossFade("CardAlreadyUsed3", 0f);
