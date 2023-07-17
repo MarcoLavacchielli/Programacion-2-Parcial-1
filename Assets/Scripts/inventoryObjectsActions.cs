@@ -27,6 +27,10 @@ public class inventoryObjectsActions : MonoBehaviour
 
     private int contador;
 
+    public int VigorPotions;
+    public int AguilePotions;
+    public Image BlockerAguilePotionImage;//FALTA REFE
+    public Combat combatScript;//FALTA REFE
 
     public int HealthPotions;
     public StadisticPlayer StadisticPlayerScript;
@@ -119,6 +123,37 @@ public class inventoryObjectsActions : MonoBehaviour
         }
     }
 
+    public void UseVigorPotion()
+    {
+        if (VigorPotions > 0 && combatpositionscript.CombatON == true)
+        {
+            StadisticPlayerScript.vigor += 10;
+            VigorPotions -= 1;
+            playerAnimator.Play("UsarPocion");
+            PlayAudioInventory(UsePotionAudio);
+            //HealthPotionParticles.Play();
+            Debug.Log("You have recover <color=blue>10 points of vigor</color> with a potion.");
+        }
+    }
+    public void UseAguilePotion()
+    {
+        if (AguilePotions > 0 && combatpositionscript.CombatON == true && combatScript.playercontador == 1)
+        {
+
+            AguilePotions -= 1;
+            playerAnimator.Play("UsarPocion");
+            PlayAudioInventory(UsePotionAudio);
+            BlockerAguilePotionImage.gameObject.SetActive(true);
+            combatScript.playercontador = 0;
+            //HealthPotionParticles.Play();
+            Debug.Log("You can use another <color=red>classic</color> card.");
+        }
+        else
+        {
+            Debug.Log("Use a <color=red>classic card</color> in this turn to be able to drink this <color=green>potion</color>.");
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 15)
@@ -146,6 +181,33 @@ public class inventoryObjectsActions : MonoBehaviour
 
 
             Debug.Log("You obtained a healing potion, you can only use it in combat by pressing the H key or its corresponding button");
+        }
+
+        if (other.gameObject.layer == 20)
+        {
+            VigorPotions += 1;
+            Destroy(other.gameObject);
+            healthPotionLight.enabled = false;
+            healthPotionParticles.Stop();
+            healthPotionMiniParticles.Stop();
+
+
+            Debug.Log("You obtained a <color=blue>vigor potion</color>, you can only use it in combat.");
+        }
+        if (other.gameObject.layer == 21)
+        {
+            if (AguilePotions <= 1)
+            {
+                AguilePotions += 1;
+
+            }
+            Destroy(other.gameObject);
+            healthPotionLight.enabled = false;
+            healthPotionParticles.Stop();
+            healthPotionMiniParticles.Stop();
+
+
+            Debug.Log("You obtained an <color=red>aguile potion</color>, you can only use it in combat. Max <color=red>2 potions</color>.");
         }
 
         if (other.gameObject.layer == 6)
