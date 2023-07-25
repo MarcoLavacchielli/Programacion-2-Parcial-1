@@ -39,6 +39,13 @@ public class ConsoleDisplay : MonoBehaviour
 
     void HandleLog(string logString, string stackTrace, LogType type)
     {
+        // Si el tipo de log es LogType.Warning o LogType.Error, no lo registramos.
+        if (type == LogType.Warning || type == LogType.Error || logString.ToLower().Contains("nullreferenceexception"))
+        {
+            return;
+        }
+
+        // Resto del código para el caso en que el log no es Warning ni Error.
         var messageInfo = new MessageInfo()
         {
             message = logString,
