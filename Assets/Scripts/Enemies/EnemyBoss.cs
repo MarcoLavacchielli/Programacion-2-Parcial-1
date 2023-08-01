@@ -63,21 +63,21 @@ public class EnemyBoss : Enemy
     }
     public void BasicDamage()
     {
-        myAnim.Play("Enemy M Attack");
+        myAnim.Play("Enemy B Attack");
         PlayerStadisticsScript.health -= 5;
         Debug.Log("The Boss dealt 5 damage to the player with a basic attack");
         PlayBasicAttackParticles();
     }
     public void HeavyDamage()
     {
-        myAnim.Play("Enemy M HAttack");
+        myAnim.Play("Enemy B HAttack");
         PlayerStadisticsScript.health -= 7;
         Debug.Log("The Boss dealt 7 damage to the player with a heavy attack");
         PlayHeavyAttackParticles();
     }
     public void SuperHeavyDamage()
     {
-        myAnim.Play("Enemy M SHAttack");
+        myAnim.Play("Enemy B SHAttack");
         PlayerStadisticsScript.health -= 9;
         Debug.Log("The Boss dealt 9 damage to the player with a super heavy attack");
         PlayHeavyAttackParticles();
@@ -93,7 +93,7 @@ public class EnemyBoss : Enemy
         else
         {
             Debug.Log("The Boss healed 10 points of health");
-            myAnim.Play("Enemy M Health");
+            myAnim.Play("Enemy Health");
         }
     }
 }
