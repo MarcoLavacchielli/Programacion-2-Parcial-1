@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 3002288512412642945}
   - component: {fileID: 188465799094053487}
   - component: {fileID: 8986671072853174714}
+  - component: {fileID: 1798684654260078699}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -401,17 +402,25 @@ MonoBehaviour:
   doorOpen: {fileID: 8300000, guid: af8542efcbb271e41a95284a9b3d556b, type: 3}
   newCard: {fileID: 8300000, guid: 120669a9b14f2154e94d7ebeb03fd389, type: 3}
   UsePotionAudio: {fileID: 8300000, guid: 36b0a3a342ef64c479d17593b6f704a7, type: 3}
+  VigorPotions: 0
+  AguilePotions: 0
+  BlockerAguilePotionImage: {fileID: 0}
+  combatScript: {fileID: 0}
   HealthPotions: 0
   StadisticPlayerScript: {fileID: 5273619601675263601}
   HealthPotionParticles: {fileID: 2920806326754537092}
   DoorHolder: {fileID: 0}
   healthPotionParticles: {fileID: 0}
   healthPotionMiniParticles: {fileID: 0}
+  demonWhispersParticles: {fileID: 0}
+  cardBoxesparticles: {fileID: 0}
   healthPotionLight: {fileID: 0}
   lightCardbox: {fileID: 0}
   demonWhispersLight: {fileID: 0}
   animationDoor: {fileID: 0}
   playerAnimator: {fileID: 6633360425303154989}
+  newCardObtainedImage: {fileID: 0}
+  newCardCanvasGroup: {fileID: 0}
 --- !u!114 &5299470838625391949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,10 +666,12 @@ MonoBehaviour:
   drawButton: {fileID: 0}
   VigorCardsAnimation: {fileID: 0}
   NormalCardsAnimation: {fileID: 0}
+  combatUIAnimator: {fileID: 0}
   devilEyesPassive: 0
   playerAnimator: {fileID: 6633360425303154989}
   counterForDrawButton: 0
   inventoryObjectsScript: {fileID: 5561988426673552123}
+  AguileBlockerImage: {fileID: 0}
 --- !u!114 &7910656068851151482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1042,6 +1053,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   target: {fileID: 8077958657708868334}
+--- !u!114 &1798684654260078699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077958657708868338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee22f142573cf924e857faf1f55dacdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PotionsCounters:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8077958658602386710
 GameObject:
   m_ObjectHideFlags: 0
