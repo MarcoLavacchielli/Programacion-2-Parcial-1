@@ -67,7 +67,7 @@ public class Enemy : MonoBehaviour
     }
     void Enemyapears()
     {
-        Debug.Log("An enemy " + tipodeenemigo + " appeared");
+        Debug.Log("An <color=red>enemy</color> " + tipodeenemigo + " has appeared.");
     }
     private void Update()
     {

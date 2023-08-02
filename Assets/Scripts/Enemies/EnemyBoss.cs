@@ -65,21 +65,21 @@ public class EnemyBoss : Enemy
     {
         myAnim.Play("Enemy B Attack");
         PlayerStadisticsScript.health -= 5;
-        Debug.Log("The Boss dealt 5 damage to the player with a basic attack");
+        Debug.Log("The Boss dealt <color=red>5 damage</color> to the player with a <color=red>basic attack</color>.");
         PlayBasicAttackParticles();
     }
     public void HeavyDamage()
     {
         myAnim.Play("Enemy B HAttack");
         PlayerStadisticsScript.health -= 7;
-        Debug.Log("The Boss dealt 7 damage to the player with a heavy attack");
+        Debug.Log("The Boss dealt <color=red>7 damage</color> to the player with a <color=red>heavy attack</color>.");
         PlayHeavyAttackParticles();
     }
     public void SuperHeavyDamage()
     {
         myAnim.Play("Enemy B SHAttack");
         PlayerStadisticsScript.health -= 9;
-        Debug.Log("The Boss dealt 9 damage to the player with a super heavy attack");
+        Debug.Log("The Boss dealt <color=red>9 damage</color> to the player with a <color=red>super heavy attack</color>.");
         PlayHeavyAttackParticles();
     }
     public void Regeneration()
@@ -88,11 +88,11 @@ public class EnemyBoss : Enemy
         health -= PlayerStadisticsScript.antihealingToEnemies;
         if (PlayerStadisticsScript.antihealingToEnemies > 0)
         {
-            Debug.Log("Boss got damage by Cursed Mud when tried to heal himself with 7 points of health");
+            Debug.Log("Boss got damage by <color=red>Cursed Mud</color> when he tried to <color=green>heal himself</color> with 7 points of health.");
         }
         else
         {
-            Debug.Log("The Boss healed 10 points of health");
+            Debug.Log("The Boss <color=green>healed</color> 10 points of health.");
             myAnim.Play("Enemy Health");
         }
     }

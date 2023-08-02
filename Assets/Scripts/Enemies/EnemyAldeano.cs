@@ -60,14 +60,14 @@ public class EnemyAldeano : Enemy
     {
         myAnim.Play("Enemy Attack");
         PlayerStadisticsScript.health -= 1;
-        Debug.Log("The enemy dealt 1 damage to the player with a basic attack");
+        Debug.Log("The <color=red>enemy</color> dealt <color=red>1 points of damage</color> to the player with a basic attack.");
         PlayBasicAttackParticles();
     }
     public void HeavyDamage()
     {
         myAnim.Play("Enemy HAttack");
         PlayerStadisticsScript.health -= 3;
-        Debug.Log("The enemy dealt 3 damage to the player with a heavy attack");
+        Debug.Log("The <color=red>enemy</color> dealt <color=red>3 points of damage</color> to the player with a heavy attack.");
         PlayHeavyAttackParticles();
     }
     public void Regeneration()
@@ -76,11 +76,11 @@ public class EnemyAldeano : Enemy
         health -= PlayerStadisticsScript.antihealingToEnemies;
         if (PlayerStadisticsScript.antihealingToEnemies > 0)
         {
-            Debug.Log("Enemy got damage by Cursed Mud when tried to heal himself with 3 points of health");
+            Debug.Log("<color=red>Enemy</color> got <color=red>damaged</color> by Cursed Mud when tried to heal himself with <color=green>3 points of health</color>.");
         }
         else
         {
-            Debug.Log("The enemy healed 2 points of health");
+            Debug.Log("The <color=red>enemy</color> healed <color=green>2 points of health</color>.");
             myAnim.Play("Enemy Health");
         }
     }

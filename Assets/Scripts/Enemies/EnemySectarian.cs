@@ -61,14 +61,14 @@ public class EnemySectarian : Enemy
     {
         myAnim.Play("Enemy S Attack");
         PlayerStadisticsScript.health -= 2;
-        Debug.Log("The enemy dealt 2 damage to the player with a basic attack");
+        Debug.Log("The <color=red>enemy</color> dealt <color=red>2 points of damage</color> to the player with a basic attack.");
         PlayBasicAttackParticles();
     }
     public void HeavyDamage()
     {
         myAnim.Play("Enemy S HAttack");
         PlayerStadisticsScript.health -= 4;
-        Debug.Log("The enemy dealt 4 damage to the player with a heavy attack");
+        Debug.Log("The <color=red>enemy</color> dealt <color=red>4 points of damage</color> to the player with a heavy attack.");
         PlayHeavyAttackParticles();
     }
     public void Regeneration()
@@ -78,11 +78,11 @@ public class EnemySectarian : Enemy
         health -= PlayerStadisticsScript.antihealingToEnemies;
         if (PlayerStadisticsScript.antihealingToEnemies > 0)
         {
-            Debug.Log("Enemy got damage by Cursed Mud when tried to heal himself with 5 points of health");
+            Debug.Log("<color=red>Enemy</color> got <color=red>damaged</color> by Cursed Mud when tried to heal himself with <color=green>5 points of health</color>.");
         }
         else
         {
-            Debug.Log("The enemy healed 4 points of health");
+            Debug.Log("The <color=red>enemy</color> healed <color=green>4 points of health</color>.");
             myAnim.Play("Enemy Health");
         }
     }

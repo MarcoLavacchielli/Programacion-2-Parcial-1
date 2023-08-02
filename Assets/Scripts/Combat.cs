@@ -550,8 +550,8 @@ public class Combat : MonoBehaviour
         //damageParticleSlot1.Play();
         //damageParticleSlot1Combate2.Play();
         //damageParticleSlot1_Combate3.Play();
-        Debug.Log("Player dealt " + carddmgtrue + (" damage"));
-        Debug.Log("Enemy has " + enemyy.health + " health left ");
+        Debug.Log("Player dealt " + carddmgtrue + (" <color=red>damage</color>."));
+        Debug.Log("<color=red>Enemy</color> has " + enemyy.health + " <color=green>health</color> left. ");
         enemyattack = true;
         playercontador = 1;
         deckscript.DrawCards();
@@ -580,8 +580,8 @@ public class Combat : MonoBehaviour
         //damageParticleSlot2.Play();
         //damageParticleSlot2Combate2.Play();
         //damageParticleSlot2_Combate3.Play();
-        Debug.Log("Player dealt " + carddmgtrue + (" damage"));
-        Debug.Log("Enemy has " + enemyy.health + " health left ");
+        Debug.Log("Player dealt " + carddmgtrue + (" <color=red>damage</color>."));
+        Debug.Log("<color=red>Enemy</color> has " + enemyy.health + " <color=green>health</color> left. ");
         //contador = 1;
         enemyattack = true;
         playercontador = 1;
@@ -608,8 +608,8 @@ public class Combat : MonoBehaviour
         //damageParticleSlot3.Play();
         //damageParticleSlot3Combate2.Play();
         //damageParticleSlot3_Combate3.Play();
-        Debug.Log("Player dealt " + carddmgtrue + (" damage"));
-        Debug.Log("Enemy has " + enemyy.health + " health left ");
+        Debug.Log("Player dealt " + carddmgtrue + (" <color=red>damage</color>."));
+        Debug.Log("<color=red>Enemy</color> has " + enemyy.health + " <color=green>health</color> left. ");
         //contador = 1;
         enemyattack = true;
         playercontador = 1;
@@ -630,7 +630,7 @@ public class Combat : MonoBehaviour
             TheCanvasesForFade[myplace].alpha = alpha;
         }
         PlayerStadisticsScript.vigor -= carddisplayscriptinSlot4.actualizarinformacióncostedeVigor();
-        Debug.Log(PlayerStadisticsScript.vigor + " vigor points left");
+        Debug.Log(PlayerStadisticsScript.vigor + " <color=blue>vigor points</color> left.");
         carddisplayscriptinSlot4.ejecutarpasivadelacartadevigor();
         activaryDesactivarCartaAlUsarlaSlot4();
 
@@ -654,7 +654,7 @@ public class Combat : MonoBehaviour
             TheCanvasesForFade[myplace].alpha = alpha;
         }
         PlayerStadisticsScript.vigor -= carddisplayscriptinSlot5.actualizarinformacióncostedeVigor();
-        Debug.Log(PlayerStadisticsScript.vigor + " vigor points left");
+        Debug.Log(PlayerStadisticsScript.vigor + " <color=blue>vigor points</color> left.");
         carddisplayscriptinSlot5.ejecutarpasivadelacartadevigor();
 
         activaryDesactivarCartaAlUsarlaSlot5();
@@ -678,7 +678,7 @@ public class Combat : MonoBehaviour
             TheCanvasesForFade[myplace].alpha = alpha;
         }
         PlayerStadisticsScript.vigor -= carddisplayscriptinSlot6.actualizarinformacióncostedeVigor();
-        Debug.Log(PlayerStadisticsScript.vigor + " vigor points left");
+        Debug.Log(PlayerStadisticsScript.vigor + " <color=blue>vigor points</color> left.");
         carddisplayscriptinSlot6.ejecutarpasivadelacartadevigor();
 
         activaryDesactivarCartaAlUsarlaSlot6();
