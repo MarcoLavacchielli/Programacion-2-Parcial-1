@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Absortion
   m_EditorClassIdentifier: 
   name: Absortion
-  description: if your vigor is below 3  <i><color=blue>increase</color></i> your
-    vigor to 7 points
+  description: If your vigor is below 3  <i><color=blue>increase</color></i> your
+    vigor to 7 points.
   image: {fileID: 21300000, guid: 4b4a554e8f6e81d4ca94b0f3c6088d39, type: 3}
   vigorcost: 1

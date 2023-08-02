@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Prominence burn
   m_EditorClassIdentifier: 
   name: Prominence burn
-  description: Deal <i><color=red>3 damage</color></i> to the enemy and <i><color=green>restore</color></i>
-    3 points of health
+  description: Deals 3 points of <i><color=red>damage</color></i> to the enemy and
+    <i><color=green>restore</color></i> 3 points of health.
   image: {fileID: 21300000, guid: 84b2031f19731af4e94cdc7b467c8b2c, type: 3}
   vigorcost: 3

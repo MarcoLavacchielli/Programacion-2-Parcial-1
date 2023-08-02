@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Souls Strike
   m_EditorClassIdentifier: 
   name: Souls Strike
-  description: Deals 5 points of <i><color=red>damage</color></i>. If your health
-    is lower than your vigor, <i><color=red>instantly</color></i> kill your enemy
+  description: Deals 5 points of <i><color=red>damage</color></i>. If your <i><color=green>health</color></i>
+    is lower than your <i><color=blue>vigor</color></i>, instantly kill your enemy.
   image: {fileID: 21300000, guid: 06b15b06c5e7d26448f1e35b94f8dbce, type: 3}
   vigorcost: 4

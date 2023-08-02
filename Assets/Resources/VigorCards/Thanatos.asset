@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Thanatos
   m_EditorClassIdentifier: 
   name: Thanatos
-  description: deals 5 points of <i><color=red>damage</color></i>. if your actual
-    health is below 16 points get 15 points of <i><color=blue>vigor</color></i>
+  description: Deals 5 points of <i><color=red>damage</color></i>. If your actual
+    <i><color=green>health</color></i> is below 16 points get 15 points of <i><color=blue>vigor</color></i>.
   image: {fileID: 21300000, guid: 8bbbf8f7314dc8647ac7a9b555e644b1, type: 3}
   vigorcost: 4

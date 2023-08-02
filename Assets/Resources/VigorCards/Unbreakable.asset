@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Unbreakable
   m_EditorClassIdentifier: 
   name: Unbreakable
-  description: gives 5 aditional <i><color=red>vigor</color></i> points on this combat
+  description: Gives 5 aditional <i><color=red>vigor</color></i> points on this combat.
   image: {fileID: 21300000, guid: f27c27f795af1bb49a730fb91a059ad8, type: 3}
   vigorcost: 1

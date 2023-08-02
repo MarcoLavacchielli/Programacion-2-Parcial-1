@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Spirit Growth
   m_EditorClassIdentifier: 
   name: Spirit Growth
-  description: deals 1 point of  <i><color=red>damage</color></i>. Use me 3 times
-    to deal 5 points of  <i><color=red>damage</color></i> every use
+  description: Deals 1 point of  <i><color=red>damage</color></i>. Use it 3 times
+    to deal 5 points of  <i><color=red>damage</color></i> every use.
   image: {fileID: 21300000, guid: ad050fb6041f2eb4aa735f378ba31fe2, type: 3}
   vigorcost: 1

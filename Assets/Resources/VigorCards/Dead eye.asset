@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dead eye
   m_EditorClassIdentifier: 
   name: Dead eye
-  description: Deal <i><color=red>7 damage</color></i> to the enemy and <i><color=green>heal</color></i>
-    you for 3 health
+  description: Deals <i><color=red>7 damage</color></i> to the enemy and <i><color=green>heal</color></i>
+    you for 3 health.
   image: {fileID: 21300000, guid: 2e9ec943d9f15ae4e9e932cf5836ffcd, type: 3}
   vigorcost: 6

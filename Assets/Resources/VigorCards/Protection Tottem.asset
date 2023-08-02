@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Protection Tottem
   m_EditorClassIdentifier: 
   name: Protection Tottem
-  description: heals 1 point of <i><color=green>health</color></i>. Use me 5 times
-    to activate everytime you use a vigor card
+  description: Heals 1 point of <i><color=green>health</color></i>. Use it 5 times
+    to activate everytime you use a <i><color=blue>vigor card</color></i>.
   image: {fileID: 21300000, guid: 9575094bd5be4f04ba6fe556c6e665ba, type: 3}
   vigorcost: 2
