@@ -136,7 +136,7 @@ public class CardDisplay : MonoBehaviour
                 inventoryObjectsScript.HealthPotionParticles.Play();
 
                 PlayAudio(komori);
-                Debug.Log("You healed");
+                Debug.Log("You had <color=green>healed</color>.");
                 break;
 
             case "Big Bang":
@@ -239,12 +239,12 @@ public class CardDisplay : MonoBehaviour
                 if (StatsPlayerScript.antihealingToEnemies <= 6)
                 {
                     StatsPlayerScript.antihealingToEnemies += 2;
-                    Debug.Log("The damage taken every time the enemies try to heal is" + StatsPlayerScript.antihealingToEnemies + " points of damage");
+                    Debug.Log("The damage taken every time the <color=red>enemy</color> try to heal is" + StatsPlayerScript.antihealingToEnemies + " <color=red>points of damage</color>.");
 
                 }
                 else
                 {
-                    Debug.Log("You already got the max stacks of Cursed Mud ");
+                    Debug.Log("You already got the max stacks of <color=red>Cursed Mud</color>.");
                 }
                 break;
             case "Giant Killer":
@@ -256,7 +256,7 @@ public class CardDisplay : MonoBehaviour
                 float PorcentageReduction = enemyy.health * 0.25f;
                 int ResultRounded = (int)Math.Round(PorcentageReduction);
                 enemyy.health -= ResultRounded;
-                Debug.Log("You have 25% of the oponent actual health as damage");
+                Debug.Log("You had <color=green>25%</color> of the oponent actual health as <color=red>damage</color>.");
                 PlayAudio(audiosArray[3]);
                 BloodFont();
                 break;
@@ -268,7 +268,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 StatsPlayerScript.healingRingPassive += 1;
                 inventoryObjectsScript.HealthPotionParticles.Play();
-                Debug.Log("You got a stack of Healing Ring");
+                Debug.Log("You had got a stack of <color=green>Healing Ring</color>.");
                 BloodFont();
                 PlayAudio(audiosArray[4]);
                 break;
@@ -281,11 +281,11 @@ public class CardDisplay : MonoBehaviour
                 if (StatsPlayerScript.damageReduction <= 2)
                 {
                     StatsPlayerScript.damageReduction += 1;
-                    Debug.Log("You got a stack of nemea Breastplate");
+                    Debug.Log("You had got a stack of <color=red>Nemea Breastplate</color>.");
                 }
                 else if (StatsPlayerScript.damageReduction > 2)
                 {
-                    Debug.Log("You already got the stacks of nemea Breastplate");
+                    Debug.Log("You already got the stacks of <color=red>Nemea Breastplate</color>.");
                 }
                 PlayAudio(audiosArray[5]);
                 BloodFont();
@@ -297,7 +297,7 @@ public class CardDisplay : MonoBehaviour
                 combatScript.damageparticleSlot15_Combate4.Play();
                 combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 enemyy.health -= StatsPlayerScript.vigor;
-                Debug.Log("You damage your enemy equal to the amount of vigor you have");
+                Debug.Log("You damaged your <color=red>enemy</color> equal to the amount of <color=blue>vigor</color> you had.");
                 PlayAudio(audiosArray[6]);
                 BloodFont();
                 break;

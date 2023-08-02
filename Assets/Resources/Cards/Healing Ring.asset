@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Healing Ring
   m_EditorClassIdentifier: 
   name: Healing Ring
-  description: Increase all <i><color=green>healing</color></i> on none vigor cards
-    in 1 point with every use permanently
+  description: Increase all <i><color=green>healing</color></i> on none <i><color=blue>vigor
+    cards</color></i> in 1 point with every use permanently.
   image: {fileID: 21300000, guid: f9b0834a36c72104eb4295fb11289d3f, type: 3}
   vigorcost: 0
   attack: 3

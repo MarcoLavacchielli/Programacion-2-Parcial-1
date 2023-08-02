@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Nemea BreastPlate
   m_EditorClassIdentifier: 
   name: Nemea BreastPlate
-  description: <i><color=green>heal</color></i> yourself in 1 point every end  of
-    turn. Max 2 stacks
+  description: <i><color=green>Heal</color></i> yourself in 1 point every end  of
+    turn. Max <i><color=yellow>2 stacks</color></i>.
   image: {fileID: 21300000, guid: 2e4cde2a89503ea40acdde6ee1395560, type: 3}
   vigorcost: 0
   attack: 4

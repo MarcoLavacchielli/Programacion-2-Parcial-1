@@ -120,7 +120,7 @@ public class inventoryObjectsActions : MonoBehaviour
             StadisticPlayerScript.health += 30;
             HealthPotions -= 1;
             HealthPotionParticles.Play();
-            Debug.Log("You have healed 30 health with a health buff");
+            Debug.Log("You had <color=green>healed 30 points</color> with a health buff.");
 
         }
     }
@@ -133,7 +133,7 @@ public class inventoryObjectsActions : MonoBehaviour
             playerAnimator.Play("UsarPocion");
             PlayAudioInventory(UsePotionAudio);
             HealthPotionParticles.Play();
-            Debug.Log("You have healed 30 health with a health buff");
+            Debug.Log("You had <color=green>healed 30 points</color> with a health buff.");
         }
     }
 
@@ -147,7 +147,7 @@ public class inventoryObjectsActions : MonoBehaviour
             playerAnimator.Play("UsarPocion");
             PlayAudioInventory(UsePotionAudio);
             //HealthPotionParticles.Play();
-            Debug.Log("You have recover <color=blue>10 points of vigor</color> with a potion.");
+            Debug.Log("You had recovered <color=blue>10 points of vigor</color> with a potion.");
         }
     }
     public void UseAguilePotion()
@@ -165,7 +165,7 @@ public class inventoryObjectsActions : MonoBehaviour
         }
         else
         {
-            Debug.Log("Use a <color=red>classic card</color> in this turn to be able to drink this <color=green>potion</color>.");
+            Debug.Log("Use a <color=red>classic card</color> in this turn to be able to drink this <color=orange>potion</color>.");
         }
     }
 
@@ -176,7 +176,7 @@ public class inventoryObjectsActions : MonoBehaviour
             ActivatorsOfCards[CardsOnCountdown] = true;
             cardsOnInventory[CardsOnCountdown].gameObject.SetActive(ActivatorsOfCards[CardsOnCountdown]);
             PlayAudioInventory(newCard);
-            Debug.Log("You have obtained a new card [i] to see the inventory");
+            Debug.Log("You had obtained a new card <color=yellow>[i]</color> to see the <color=yellow>inventory</color>.");
             NewCardFeedBack();
             /*if (inventoryTutorialTrigger == false)
             {
@@ -195,7 +195,7 @@ public class inventoryObjectsActions : MonoBehaviour
             healthPotionMiniParticles.Stop();
 
 
-            Debug.Log("You obtained a healing potion, you can only use it in combat by pressing the H key or its corresponding button");
+            Debug.Log("You had obtained a <color=green>healing potion</color>, you can only use it in combat by pressing the <color=yellow>H</color> key or its corresponding button.");
         }
 
         if (other.gameObject.layer == 20)
@@ -206,7 +206,7 @@ public class inventoryObjectsActions : MonoBehaviour
             vigorParticlesPotion.Stop();
 
 
-            Debug.Log("You obtained a <color=blue>vigor potion</color>, you can only use it in combat.");
+            Debug.Log("You had obtained a <color=blue>vigor potion</color>, you can only use it in combat.");
         }
         if (other.gameObject.layer == 21)
         {
@@ -221,7 +221,7 @@ public class inventoryObjectsActions : MonoBehaviour
             aguileMiniParticlesPotion.Stop();
 
 
-            Debug.Log("You obtained an <color=orange>aguile potion</color>, you can only use it in combat. Max <color=orange>2 potions</color>.");
+            Debug.Log("You had obtained an <color=orange>aguile potion</color>, you can only use it in combat. Max <color=red>2 potions</color>.");
         }
 
         if (other.gameObject.layer == 6)
@@ -232,19 +232,19 @@ public class inventoryObjectsActions : MonoBehaviour
             PlayAudioInventory(DeadlyEvilPageTutorial);
             if (WhispersCount == 1)
             {
-                Debug.Log("Listen carefully Oswald, the fight is near. you have two decks. one of them will feed me your vigor to give you much of my power and they can turn the fight in your favor if you use it with ingenuity. The more you fight, your stamina will increase, and therefore, the more I can consume from you, so try not to die too quickly.");
+                Debug.Log("Listen carefully Oswald, the fight is near. You have <color=yellow>two decks</color>. One of them will feed me your <color=blue>vigor</color> to give you much of my power and they can turn the fight in your favor if you use it with ingenuity. The more you fight, your <color=blue>stamina</color> will increase, and therefore, the more I can consume from you, so try not to die too quickly.");
             }
             else if (WhispersCount == 2)
             {
-                Debug.Log("By pressing [i] you will enter the inventory, press on a card to equip it. you must equip both vigor cards and normal cards or you will not be able to defeat your enemies.");
+                Debug.Log("By pressing <color=yellow>[i]</color> you will enter the inventory, press on a card to equip it. you must equip both <color=blue>vigor</color> cards and <color=red>normal</color> cards or you will not be able to defeat your <color=red>enemies</color>.");
             }
             else if (WhispersCount == 3)
             {
-                Debug.Log("The deck that does not consume your stamina are just a supplement, but they can be very timely. I gave them to you out of pity...");
+                Debug.Log("The deck that does not consume your <color=blue>stamina</color> are just a supplement, but they can be very timely. I gave them to you out of pity...");
             }
             else if (WhispersCount == 4)
             {
-                Debug.Log("Is that how you use my cards? you are disappointing");
+                Debug.Log("Is that how you use <color=red>MY</color> cards!? you are disappointing me.");
             }
         }
         if (other.gameObject.layer == 8)

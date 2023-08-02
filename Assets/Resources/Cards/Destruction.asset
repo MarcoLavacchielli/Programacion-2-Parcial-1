@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Destruction
   description: Does <i><color=red>high</color></i> damage to <i><color=red>one</color></i>
-    enemy
+    enemy.
   image: {fileID: 21300000, guid: a8980800f78746a428378301a996dc0f, type: 3}
   vigorcost: 10
   attack: 7

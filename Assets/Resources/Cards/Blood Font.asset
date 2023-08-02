@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Blood Font
   description: Increase the <i><color=red>damage</color></i> of none vigor cards
-    in 1 point with every use permanently
+    in <i><color=blue>1 point</color></i> with every use permanently.
   image: {fileID: 21300000, guid: 265f5715b43e5b7429b620f72d60db57, type: 3}
   vigorcost: 0
   attack: 4

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fire Explosion
   m_EditorClassIdentifier: 
   name: Fire Explosion
-  description: An explosion of <i><color=red>fire</color></i> that damage the enemy
+  description: An explosion of <i><color=red>fire</color></i> that damage the enemy.
   image: {fileID: 21300000, guid: 9e3e64e139fe92e4d8fb44a79fb3ff97, type: 3}
   vigorcost: 4
   attack: 2
