@@ -37,15 +37,29 @@ public class inventoryObjectsActions : MonoBehaviour
 
     public ParticleSystem HealthPotionParticles;
 
+    public ParticleSystem aguileParticlesPlayer;
+
+    public ParticleSystem vigorParticlesPlayer;
+
     public GameObject DoorHolder;
 
     public ParticleSystem healthPotionParticles;
 
     public ParticleSystem healthPotionMiniParticles;
 
+    public ParticleSystem vigorParticlesPotion;
+
+    public ParticleSystem aguileMiniParticlesPotion;
+
+    public ParticleSystem aguileParticlesPotion;
+
     public ParticleSystem demonWhispersParticles;
 
     public ParticleSystem cardBoxesparticles;
+
+    public Light aguileLightPotion;
+
+    public Light vigorLightPotion;
 
     public Light healthPotionLight;
 
@@ -127,6 +141,7 @@ public class inventoryObjectsActions : MonoBehaviour
     {
         if (VigorPotions > 0 && combatpositionscript.CombatON == true)
         {
+            vigorParticlesPlayer.Play();
             StadisticPlayerScript.vigor += 10;
             VigorPotions -= 1;
             playerAnimator.Play("UsarPocion");
@@ -139,7 +154,7 @@ public class inventoryObjectsActions : MonoBehaviour
     {
         if (AguilePotions > 0 && combatpositionscript.CombatON == true && combatScript.playercontador == 1)
         {
-
+            aguileParticlesPlayer.Play();
             AguilePotions -= 1;
             playerAnimator.Play("UsarPocion");
             PlayAudioInventory(UsePotionAudio);
@@ -187,9 +202,8 @@ public class inventoryObjectsActions : MonoBehaviour
         {
             VigorPotions += 1;
             Destroy(other.gameObject);
-            healthPotionLight.enabled = false;
-            healthPotionParticles.Stop();
-            healthPotionMiniParticles.Stop();
+            vigorLightPotion.enabled = false;
+            vigorParticlesPotion.Stop();
 
 
             Debug.Log("You obtained a <color=blue>vigor potion</color>, you can only use it in combat.");
@@ -202,12 +216,12 @@ public class inventoryObjectsActions : MonoBehaviour
 
             }
             Destroy(other.gameObject);
-            healthPotionLight.enabled = false;
-            healthPotionParticles.Stop();
-            healthPotionMiniParticles.Stop();
+            aguileLightPotion.enabled = false;
+            aguileParticlesPotion.Stop();
+            aguileMiniParticlesPotion.Stop();
 
 
-            Debug.Log("You obtained an <color=red>aguile potion</color>, you can only use it in combat. Max <color=red>2 potions</color>.");
+            Debug.Log("You obtained an <color=orange>aguile potion</color>, you can only use it in combat. Max <color=orange>2 potions</color>.");
         }
 
         if (other.gameObject.layer == 6)
