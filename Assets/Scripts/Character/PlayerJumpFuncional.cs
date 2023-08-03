@@ -10,20 +10,28 @@ public class PlayerJumpFuncional : MonoBehaviour
     public bool onFloor = true;
     Charview view;
 
+    CombatPosition combatPosition;
+
     void Awake()
     {
         myRig = GetComponent<Rigidbody>();
         //jumpy = GetComponent<PlayerJumpFuncional>();
         view = GetComponent<Charview>();
+
+        combatPosition = FindObjectOfType<CombatPosition>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && onFloor == true)
         {
-            view.Salto(true);
-            AnimRealJump();
-            onFloor = false;
+            if (combatPosition.CombatON == false)
+            {
+                view.Salto(true);
+                AnimRealJump();
+                onFloor = false;
+            }
+            
         }
     }
 
