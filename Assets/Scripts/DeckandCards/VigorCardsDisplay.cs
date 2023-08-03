@@ -156,14 +156,12 @@ public class VigorCardsDisplay : MonoBehaviour
                 }
                 break;
             case "Unbreakable":
-                combatScript.damageparticleSlot20.Play();
-                combatScript.damageparticleSlot20Combate2.Play();
-                combatScript.damageparticleSlot20_Combate3.Play();
-                combatScript.damageparticleSlot20_Combate4.Play();
+                
                 combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 PlayAudio(windowFixing);
                 stadisticplayerScipt.vigor += 5;
                 protectiontottempasive();
+                InvObjActionsScript.vigorParticlesPlayer.Play();
                 Debug.Log("You had increase your <color=blue>vigor</color> in <color=blue>5 points</color>.");
                 break;
             case "Protection Tottem":
@@ -225,11 +223,10 @@ public class VigorCardsDisplay : MonoBehaviour
                
                 break;
             case "Absolution":
-                combatScript.damageparticleSlot25.Play();
-                combatScript.damageparticleSlot25Combate2.Play();
-                combatScript.damageparticleSlot25_Combate3.Play();
-                combatScript.damageparticleSlot25_Combate4.Play();
+                
                 combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
+               
+                InvObjActionsScript.vigorParticlesPlayer.Play();
                 enemyy.health -= 6;
                 PlayAudio(iceMagic);
                 stadisticplayerScipt.health += 4;
@@ -260,6 +257,7 @@ public class VigorCardsDisplay : MonoBehaviour
                 protectiontottempasive();
                 if (stadisticplayerScipt.vigor <= 3)
                 {
+                    InvObjActionsScript.vigorParticlesPlayer.Play();
                     stadisticplayerScipt.vigor = 7;
                     Debug.Log("You had increased your <color=blue>vigor in 7 points</color>.");
                 }
@@ -331,6 +329,7 @@ public class VigorCardsDisplay : MonoBehaviour
                 combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 PlayAudio(audiosVigorArray[4]);
                 stadisticplayerScipt.vigor += 7;
+                InvObjActionsScript.vigorParticlesPlayer.Play();
                 Debug.Log("You had increased your <color=blue>vigor in 7 points</color>.");
                 if (stadisticplayerScipt.health <= 15)
                 {
@@ -355,6 +354,7 @@ public class VigorCardsDisplay : MonoBehaviour
                 inventoryObjectsScript.HealthPotionParticles.Play();
                 stadisticplayerScipt.health += 7;
                 stadisticplayerScipt.vigor += 6;
+                InvObjActionsScript.vigorParticlesPlayer.Play();
                 Debug.Log("You had increased your <color=blue>vigor in 6 points</color> and you had <color=green>healed yourself in 7 points</color>.");
                 break;
             case "Souls Strike":
@@ -385,6 +385,7 @@ public class VigorCardsDisplay : MonoBehaviour
                 Debug.Log("You had done <color=red>5 points of damage</color> to your oponent.");
                 if (stadisticplayerScipt.health <= 15)
                 {
+                    InvObjActionsScript.vigorParticlesPlayer.Play();
                     stadisticplayerScipt.vigor += 15;
                     Debug.Log("You had increased your <color=blue>vigor in 15 points</color>.");
                 }

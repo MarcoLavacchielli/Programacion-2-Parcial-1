@@ -273,10 +273,7 @@ public class CardDisplay : MonoBehaviour
                 PlayAudio(audiosArray[4]);
                 break;
             case "Nemea BreastPlate":
-                combatScript.damageparticleSlot14.Play();
-                combatScript.damageparticleSlot14Combate2.Play();
-                combatScript.damageparticleSlot14_Combate3.Play();
-                combatScript.damageparticleSlot14_Combate4.Play();
+                
                 combatScript.combatUIAnimator.CrossFade("EnemyHearthAnimation", 0f);
                 if (StatsPlayerScript.damageReduction <= 2)
                 {
